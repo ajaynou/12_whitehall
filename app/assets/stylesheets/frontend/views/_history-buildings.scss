@@ -1,0 +1,182 @@
+.histories-show {
+  .content-list, .content-body {
+    @include media(tablet) {
+      float: left;
+      width: $one-third;
+    }
+  }
+  .content-body {
+    h2 {
+      @include heading-27;
+      border-bottom: 1px solid $grey-2;
+      font-weight: bold;
+      margin-bottom: $gutter-two-thirds;
+    }
+    h3 {
+      @include core-19;
+      font-weight: bold;
+      margin-bottom: $gutter-one-third;
+    }
+    p {
+      @include core-19;
+      margin-bottom: $gutter;
+    }
+    @include media(tablet) {
+      width: $two-thirds;
+    }
+    address {
+      @include core-19;
+      font-style:normal;
+      margin-bottom: $gutter;
+    }
+    img {
+      margin-bottom: $gutter-half;
+      width: $full-width;
+    }
+    figure {
+      margin-bottom: $gutter;
+      figcaption {
+        color: $secondary-text-colour;
+      }
+    }
+    .vcard {
+      margin-bottom: $gutter;
+    }
+  }
+
+  .content-list {
+    padding-top: $gutter-one-sixth;
+    nav {
+      padding: $gutter-two-thirds 0 $gutter;
+      h1 {
+        font-weight: bold;
+        margin-bottom: $gutter-one-sixth;
+      }
+      li {
+        list-style: disc;
+        margin-left: 1.2em;
+        @media (min-width: 1px ){ // target modern browsers
+          list-style: none;
+          &:before {
+            content: "-";
+            position: relative;
+            float: left;
+            width: $gutter-half;
+            margin-left: $gutter-half*-1;
+          }
+        }
+      }
+    }
+    img {
+      max-width: $full-width;
+    }
+  }
+
+  .vcard {
+    p, span {
+      @include core-16;
+      margin-bottom: 0;
+    }
+  }
+
+  blockquote {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    color: lighten($text-colour, $one-third);
+
+    p {
+      padding-left: $gutter-half;
+      @include right-to-left {
+        padding-left: 0;
+        padding-right: $gutter-half;
+      }
+
+      @include media(tablet) {
+        padding-left: $gutter;
+        @include right-to-left {
+          padding-left: 0;
+          padding-right: $gutter;
+        }
+      }
+    }
+    & p:before {
+      content: "\201C";
+      float: left;
+      clear: both;
+      @include core-48;
+      margin-left: -$gutter;
+      margin-top: -$gutter-one-sixth;
+      @include right-to-left {
+        content: "\201D";
+        float: right;
+        margin-left: 0;
+        margin-right: (-$gutter);
+      }
+    }
+    & p.last-child:after {
+      content: "\201D";
+      @include right-to-left {
+        content: "\201C";
+      }
+    }
+
+    @include media(desktop) {
+      margin: 0 0 0 (-$gutter);
+    }
+  }
+
+  blockquote + cite {
+    color: $secondary-text-colour;
+    font-style: normal;
+    position: relative;
+    top: -($gutter);
+  }
+
+  .virtual-tour {
+    margin: 0 (-$gutter-half) $gutter;
+    @extend %contain-floats;
+
+    #tour-player {
+      .js-enabled & {
+        margin: 0 $gutter-half $gutter-half;
+        height: 400px;
+      }
+    }
+
+
+    .tour-nav {
+      @include media(tablet) {
+        float: left;
+        width: $one-third;
+      }
+
+      ul {
+        padding: 0 $gutter-half;
+
+        li {
+          @include core-14;
+          display: block;
+          border-bottom: 1px solid $border-colour;
+          padding: 4px 0 3px;
+        }
+      }
+    }
+    .tour-info {
+      @include media(tablet) {
+        float: left;
+        width: $two-thirds;
+      }
+      .tour-content {
+        padding: 0 $gutter-half;
+      }
+      .js-enabled & {
+        display: none;
+
+        &.js-visible {
+          display: block;
+        }
+      }
+    }
+  }
+}

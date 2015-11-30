@@ -1,0 +1,455 @@
+ps:
+  document:
+    headings:
+      attachments:
+        one: "سند"
+        other: "سندونه"
+      applies_to_nations: "پورې اړه لری"
+      field_of_operation: "د کړنو څانګه"
+      from:
+      location:
+      part_of:
+    type:
+      announcement:
+        one: "خبرتیا"
+        other: "خبرتیاوې"
+      authored_article:
+        one: "تالیف شوی مضمون"
+        other: "تالیف شوي مضامین"
+      case_study:
+        one: "موردی څیړنه"
+        other: "مودری څیړنی"
+      closed_consultation:
+        one: "محرمه مشوره"
+        other: "محرمه مشوری"
+      consultation:
+        one: "مشوره"
+        other: "مشوری"
+      consultation_outcome:
+        one: "د مشوری پایله"
+        other: "د مشورو پایله"
+      corporate_report:
+        one: "متحد راپور"
+        other: "متحد راپورونه"
+      correspondence:
+        one: "ارتباط ساتنه"
+        other: "ارتباطات ساتنه"
+      decision:
+        one:
+        other:
+      detailed_guidance:
+        one: "مفصله لارښوونه"
+        other: "مفصلی لارښوونی"
+      document_collection:
+        one: "سلسله"
+        other:
+      draft_text:
+        one: "مسوده"
+        other: "مسودی"
+      fatality_notice:
+        one: "دمړینی خبرتیا"
+        other: "دمړینی خبرتیاوی"
+      foi_release:
+        one: "د بیان د آزادی خپرونه"
+        other: "د بیان د آزادی خپرونی"
+      form:
+        one: "فارم"
+        other: "فارمونه"
+      government_response:
+        one: "د دولت ځواب"
+        other: "د دولت ځوابونه"
+      guidance:
+        one: "رهنمایی"
+        other: "رهنمایی"
+      impact_assessment:
+        one: "د تاثیراتو څیړنه"
+        other: "د تاثیراتو څیړنی"
+      imported:
+        one: "وارد شوی - د انتظار نمونه"
+        other: "وارد شوی - د انتظار نمونه"
+      independent_report:
+        one: "آزاد راپور"
+        other: "آزاد راپورونه"
+      international_treaty:
+        one:
+        other:
+      map:
+        one: "نقشه"
+        other: "نقشی"
+      national_statistics:
+        one: "شمیرنه - ملی شمیرنې"
+        other: "شمیرنه - ملی شمیرنې"
+      news_article:
+        one: "خبری مقاله"
+        other: "خبری مقالی"
+      news_story:
+        one: "خبری راپور"
+        other: "خبری راپورونه"
+      notice:
+        one:
+        other:
+      open_consultation:
+        one: "آزاده مشوره"
+        other: "آزادې مشورې"
+      oral_statement:
+        one: "پارلمان ته شفاهی اعلامیه"
+        other: "پارلمان ته شفاهی اعلامیی"
+      policy_paper:
+        one: "د پالیسۍ سند"
+        other: "د پالیسې سندونه"
+      press_release:
+        one: "مطبوعاتی خبرپاڼه"
+        other: "مطبوعاتی خبرپاڼې"
+      promotional:
+        one: "روزونکې مواد"
+        other: "روزونکی مواد"
+      publication:
+        one: "خپرونه"
+        other: "خپرونې"
+      regulation:
+        one:
+        other:
+      research:
+        one: "څیړنه او تجزیه"
+        other: "ځیړنه او تجزیه"
+      speaking_notes:
+        one: "د وینا یادښت"
+        other: "د وینا یادښتونه"
+      speech:
+        one: "وینا"
+        other: "ویناوې"
+      statement_to_parliament:
+        one: "پارلمان ته اعلامیه"
+        other: "پارلمان ته اعلامیې"
+      statistical_data_set:
+        one: "د شمیرنې اطلاعات"
+        other: "د شمیرنې اطلاعات"
+      official_statistics:
+        one: "شمیرنه"
+        other: "شمیرنه"
+      statutory_guidance:
+        one:
+        other:
+      transcript:
+        one: "لیکنه"
+        other: "لیکنې"
+      transparency:
+        one: "د روڼوالې اطلاعات"
+        other: "د روڼوالي اطلاعات"
+      worldwide_priority:
+        one: "نړیوال لومړیتوب"
+        other: "نړیوال لومړیتوبونه"
+      written_statement:
+        one: "پارلمان ته لیکلې اعلامیه"
+        other: "پارلمان ته لیکلې اعلامیې"
+    contents:
+    footer_meta:
+      full_page_history:
+      page_history:
+      published:
+      updated:
+    published: "خپور شوی"
+    read: "دا مضمون ووایاست %{title}"
+    speech:
+      author_title:
+        minister: "وزیر"
+        speaker: "لیکونکی"
+      delivered_on: "پر دې نیټه ورکړل شو"
+      delivery_title:
+        minister: "وزیر"
+        speaker: "ویونکی"
+      written_on: "لیکلی دی په"
+    updated: "تازه شوي"
+    view: "لید '%{title}'"
+  people:
+    heading:
+      one:
+      other:
+    biography:
+    previous_roles:
+    previous_roles_in_government:
+    read_more:
+  roles:
+    heading:
+      one:
+      other:
+    headings:
+      current_holder:
+      previous_holders:
+      responsibilities:
+    ministerial:
+    policies_responsible_with_person:
+    previous_holders:
+    read_more:
+  world_location:
+    type:
+      international_delegation:
+        one: "نړیوال هیئت"
+        other: "نړیوال هیئتونه"
+      world_location:
+        one: "په نړۍ کې موقعیت"
+        other: "په نړۍ کې موقعیتونه"
+    headings:
+      announcements: "زموږ اعلانات"
+      country: "هیواد"
+      documents: "سندونه"
+      mission: "زموږ ماموریت"
+      organisations: "دفترونه"
+      priorities: "وړاندیتوبونه"
+      publications: "زموږ نشریات"
+      quick_links: "چټکی اړیکی"
+      related_policies: "ارتباط لرونکی پالیسی ګانی"
+      statistics: "زموږه احصایی"
+  activerecord:
+    attributes:
+      attachment:
+        hoc_paper_number:
+        isbn:
+        unnumbered_hoc_paper:
+      attachment_data:
+        file:
+      corporate_information_page/corporate_information_page_attachments/attachment:
+        command_paper_number:
+        hoc_paper_number:
+        isbn:
+        order_url:
+        price:
+        title:
+        unique_reference:
+        unnumbered_hoc_paper:
+      corporate_information_page/corporate_information_page_attachments/attachment/attachment_data:
+        file:
+      policy_group/policy_group_attachments/attachment/attachment_data:
+        file:
+      response/consultation_response_attachments/attachment:
+        command_paper_number:
+        hoc_paper_number:
+        isbn:
+        order_url:
+        price:
+        title:
+        unique_reference:
+        unnumbered_hoc_paper:
+      response/consultation_response_attachments/attachment/attachment_data:
+        file:
+    nested_attachment_data_field_names:
+      file:
+    nested_attachment_field_names:
+      command_paper_number:
+      hoc_paper_number:
+      isbn:
+      order_url:
+      price:
+      title:
+      unique_reference:
+      unnumbered_hoc_paper:
+  announcements:
+    heading: "اعلانونه"
+    view_all:
+  attachment:
+    accessibility:
+      full_help_html: که غواړی چی دا سند په مختلف فارمت یعنی بریل، صوتی شکل کی ترلاسه
+        کړی %{email} لطفاْ خپل ادرس، تیلیفون نمبر او د سند نوم ایمیل کړی ("%{title}")%{references}
+      heading: "دا فایل کیدای شی جی د کومکی تیکنالوژی د استعمالوونکو لپاره مناسب نه
+        وی"
+      request_a_different_format: "د یو مختلف فارمت غوښتنه وکړی"
+    headings:
+      order_a_copy: "د کاپی غوښتنه وکړی"
+      order_a_copy_full: "د سند د کاپی غوښتنه وکړی"
+      published: "خپور شوی"
+      reference: "مواخذ"
+      unnumbered_command_paper:
+      unnumbered_hoc_paper:
+    opendocument:
+      help_html:
+    see_more:
+  change_notes:
+    page_history:
+    published_at:
+    see_all_updates:
+    updated_at:
+  contact:
+    contact_form: "د اړیکوپاڼه"
+    email: "برښنالیک"
+  corporate_information_page:
+    type:
+      about:
+      about_our_services:
+      access_and_opening:
+      complaints_procedure:
+      equality_and_diversity:
+      media_enquiries:
+      membership:
+      our_energy_use:
+      our_governance:
+      personal_information_charter: "د شخصی معلوماتی په اړه سند"
+      petitions_and_campaigns:
+      procurement:
+      publication_scheme: "د خپرولو پلان"
+      recruitment:
+      research:
+      social_media_use: "د ټولنیزو رسنیو استعمال"
+      staff_update:
+      statistics:
+      terms_of_reference:
+      welsh_language_scheme: "د ویلز د ژبی پلان"
+  date:
+    formats:
+      default: "%d %B %Y"
+      long_ordinal: "%e %B %Y"
+  detailed_guidance:
+    back_to_contents:
+    contents:
+    more:
+    part_of_published_collection:
+    published_related_detailed_guides:
+    related_mainstream_content:
+    see_more_like_this:
+  document_filters:
+    description: "تاسې کولای شي  د فیلترونه څخه یوازې د هغو پایلو د ښودلو په خاطر
+      کار واخلۍ چې ستاسې لپاره په زړه پوری وی"
+    no_results:
+      description: "کوښښ وکړۍ لا زیات ولتوۍ او بیا کوښښ وکړۍ"
+      title: "سمون لرونکی اسناد شتون نه لری"
+      tna_heading:
+      tna_link:
+    world_locations:
+      all: "ټول موقعیتونه"
+      label: "نړیوال موقعیتونه"
+  feeds:
+    email:
+    feed:
+    get_updates_to_this_list:
+    latest_activity: "اخیرنی فعالیت"
+  i18n:
+    direction: rtl
+  language_names:
+    ps: "پښتو"
+  latest_feed:
+    no_updates: "تر اوسه تازه معلومات په لاس کی نشته"
+    title: "آخرنی"
+  national_statistics:
+    heading:
+  number:
+    human:
+      storage_units:
+        format: "%n%u"
+  organisation:
+    about:
+      read_more: "زمونږ د فعالیتونو په اړه نور معلومات ووایاست"
+    corporate_information:
+      access_our_info: "زمونږمعلوماتو ته لاس رسی پیدا کړی"
+      foi_how_to: "څنګه کولای شی چی د بیان د آزادی درخواست جوړ کړی"
+      foi_releases: "د بیان د آزادی خپرونی"
+      jobs_and_contacts: "دندی او تړونونه"
+      organisation_chart:
+      transparency: "د شفافیت معلومات"
+    foi_exemption_html:
+    headings:
+      chief_professional_officers: "زمونږه لوړپوړي مسلکی مدیران"
+      contact: "تماس  %{name}"
+      corporate_information: "متحد معلومات"
+      corporate_reports: "متحد راپورونه"
+      documents:
+      freedom_of_information_act:
+      making_foi_requests:
+      our_announcements: "زمونږه اعلانات"
+      our_consultations:
+      our_judges:
+      our_management: "زمونږه اداره"
+      our_ministers: "زموږه وزیران"
+      our_policies: "زموږه پالیسی ګانی"
+      our_publications: "زموږه نشریات"
+      our_senior_military_officials: "زموږه لوړپوړي نظامی اراکین"
+      our_services: "زموږه خدمتونه"
+      our_statistics: "زموږه احصائی"
+      our_topics: "موږ په دغه موضوعاتو کار کوو"
+      special_representatives: "خصوصی نمایندګان"
+      traffic_commissioners: "د ترافیکو کمشنران"
+      what_we_do: "موږڅه کوو"
+      who_we_are:
+    making_foi_requests:
+      step1_html:
+      step2_html:
+      step3_html:
+  policies:
+    heading: "پالیسی ګانی"
+    view_all:
+  publications:
+    heading: "نشریات"
+    headings:
+      detail: "تفصیل"
+  read_more: "نور ووایاست"
+  see_all:
+    announcement: "ټول وګوری خبرتیاوې"
+    authored_article: "ټول وګوری تالیف شوي مضامین"
+    case_study: "ټول وګوری مودری څیړنی"
+    closed_consultation: "ټول وګوری محرمه مشوری"
+    consultation: "ټول وګوری مشوری"
+    consultation_outcome: "ټول وګوری د مشورو پایله"
+    corporate_report: "ټول وګوری متحد راپورونه"
+    correspondence: "ټول وګوری ارتباطات ساتنه"
+    decision:
+    detailed_guidance: "ټول وګوری مفصلی لارښوونی"
+    document_collection:
+    draft_text: "ټول وګوری مسودی"
+    fatality_notice: "ټول وګوری دمړینی خبرتیاوی"
+    foi_release: "ټول وګوری د بیان د آزادی خپرونی"
+    form: "ټول وګوری فارمونه"
+    government_response: "ټول وګوری د دولت ځوابونه"
+    guidance: "ټول وګوری رهنمایی"
+    impact_assessment: "ټول وګوری د تاثیراتو څیړنی"
+    imported: "ټول وګوری وارد شوی - د انتظار نمونه"
+    international_treaty:
+    map: "ټول وګوری نقشی"
+    national_statistics: "ټول وګوری شمیرنه - ملی شمیرنې"
+    news_article: "ټول وګوری خبری مقالی"
+    news_story: "ټول وګوری خبری راپورونه"
+    notice:
+    open_consultation: "ټول وګوری آزادې مشورې"
+    oral_statement: "ټول وګوری پارلمان ته شفاهی اعلامیی"
+    policy: "ټول وګوری پالیسی ګانی"
+    policy_paper: "ټول وګوری د پالیسې سندونه"
+    press_release: "ټول وګوری مطبوعاتی خبرپاڼې"
+    promotional: "ټول وګوری روزونکی مواد"
+    publication: "ټول وګوری خپرونې"
+    regulation:
+    research: "ټول وګوری ځیړنه او تجزیه"
+    speaking_notes: "ټول وګوری د وینا یادښتونه"
+    speech: "ټول وګوری ویناوې"
+    statement_to_parliament: "ټول وګوری پارلمان ته اعلامیې"
+    statistical_data_set: "ټول وګوری د شمیرنې اطلاعات"
+    statistics: "ټول وګوری شمیرنه"
+    statutory_guidance:
+    transcript: "ټول وګوری لیکنې"
+    transparency: "ټول وګوری د روڼوالي اطلاعات"
+    worldwide_priority: "ټول وګوری نړیوال لومړیتوبونه"
+    written_statement: "ټول وګوری پارلمان ته لیکلې اعلامیې"
+  social_media:
+    follow_us:
+  support:
+    array:
+      last_word_connector: "او"
+  time:
+    formats:
+      long_ordinal: "%e %B %Y %H:%M"
+  worldwide_organisation:
+    corporate_information:
+      about_our_services_html:
+      personal_information_charter_html: " زموږ تشریح کوی چې موږ د شخصی معلوماتو سره
+        څرنګه چلند کوو"
+      publication_scheme_html: "زموږ د هغو معلوماتو په اړه ولولۍ چې هره ورڅ یې موږ
+        خپروو %{link}."
+      social_media_use_html: "زموږه پالسی ولولی %{link}."
+      welsh_language_scheme_html: "د نشریاتو په اړه  زموږ د ژمنو  معلومات ترلاسه کړۍ
+        %{link}."
+    find_out_more: "بشپړ معلومات او د اړیکو په اړه ټول تفصیلات وګورۍ"
+    headings:
+      about_us: "زموږ په هکله"
+      contact_us: "تماس ونیسی"
+      corporate_information: "متحد معلومات"
+      follow_us: "مونږ تعقیب کړی"
+      our_people: "زموږ خلک"
+      our_services: "زموږ خدمتونه"
+    location: "موقعیت"
+    part_of: "یوه برخه د"

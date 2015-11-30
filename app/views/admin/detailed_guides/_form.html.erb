@@ -1,0 +1,37 @@
+<div class="format-advice">
+  <p><strong>Use this format for:</strong> Guidance for professional or specialist users so that they can complete a defined task.</p>
+</div>
+
+<%= edition_editing_tabs(edition) do %>
+  <%= standard_edition_form(edition) do |form| %>
+
+    <fieldset>
+      <legend>Associations</legend>
+      <%= render 'admin/shared/policy_fields', form: form %>
+      <%= render partial: 'topic_fields', locals: { form: form, edition: edition } %>
+
+      <%= form.text_field :need_ids, label_text: 'Maslow Need IDs (enter a comma-separated list)', placeholder: "Enter a comma-separated list of Maslow Need IDs", value: edition.need_ids.join(", ") %>
+
+      <%= render partial: 'specialist_sector_fields', locals: { form: form, edition: edition } %>
+
+      <%= render partial: 'organisation_fields', locals: { form: form, edition: edition } %>
+
+      <% cache_if edition.related_detailed_guide_ids.empty?, taggable_detailed_guides_cache_digest do %>
+        <%= form.label :related_detailed_guide_ids, 'Related guides' %>
+        <%= form.select :related_detailed_guide_ids, options_for_select(taggable_detailed_guides_container, edition.related_detailed_guide_ids), {}, multiple: true, class: 'chzn-select form-control', data: { placeholder: "Choose related detailed guides…"} %>
+      <% end %>
+    </fieldset>
+
+    <%= render partial: 'inline_attachments_info', locals: { form: form, edition: edition } %>
+
+    <fieldset>
+      <legend>Related mainstream content</legend>
+      <%= form.text_field :related_mainstream_content_url %>
+      <%= form.text_field :related_mainstream_content_title %>
+      <%= form.text_field :additional_related_mainstream_content_url %>
+      <%= form.text_field :additional_related_mainstream_content_title %>
+    </fieldset>
+
+    <%= render partial: 'nation_fields', locals: { form: form, edition: edition } %>
+  <% end %>
+<% end %>

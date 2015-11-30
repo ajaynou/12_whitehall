@@ -1,0 +1,109 @@
+<% page_title @edition.title, @edition.format_name %>
+<% page_class "edition-show" %>
+<% initialise_script "GOVUK.adminEditionShow" %>
+
+<div class="row">
+  <div class="<%= @edition.imported? ? "col-md-6" : "col-md-8" %> edition-metadata">
+    <%= render partial: 'show_metadata' %>
+  </div>
+
+  <div class="<%= @edition.imported? ? "col-md-6" : "col-md-4" %> edition-sidebar">
+    <section>
+      <% if @edition.imported? %>
+        <%= convert_to_draft_edition_form(@edition) %>
+      <% end %>
+
+      <% if @edition.can_unschedule? && can?(:update, @edition) %>
+        <%= unschedule_edition_button(@edition) %>
+      <% end %>
+
+      <% if scheduler.can_perform? && can?(:publish, @edition) %>
+        <%= schedule_edition_form(@edition) %>
+      <% elsif force_scheduler.can_perform? && can?(:force_publish, @edition) %>
+        <%= schedule_edition_form(@edition, force: true) %>
+      <% end %>
+
+      <%= submit_edition_button(@edition) if @edition.can_submit? %>
+
+      <% if publisher.can_perform? && can?(:publish, @edition) %>
+        <%= publish_edition_form(@edition) %>
+      <% elsif force_publisher.can_perform? && can?(:force_publish, @edition) %>
+        <%= render partial: "admin/edition_workflow/force_publish_modal", locals: { modal: true } %>
+        <%= publish_edition_form(@edition, force: true) %>
+      <% end %>
+
+      <%= reject_edition_button(@edition) if @edition.can_reject? && can?(:reject, @edition) %>
+      <%= # TODO: remove condition based on unpublishing once we have a separate state for unpublished editions
+        delete_edition_button(@edition) if @edition.can_delete? && @edition.unpublishing.nil? %>
+      <% if can?(:unpublish, @edition) %>
+        <% if @edition.can_unpublish? %>
+          <%= link_to 'Withdraw or unpublish', confirm_unpublish_admin_edition_path(@edition, lock_version: @edition.lock_version), class: "btn btn-danger" %>
+        <% elsif @edition.unpublishing.present? && @edition.unpublishing.explanation.present? %>
+          <%= link_to "Edit #{withdrawal_or_unpublishing(@edition)} explanation", edit_admin_edition_unpublishing_path(@edition), class: "btn btn-primary" %>
+        <% end %>
+      <% end %>
+    </section>
+
+    <%= render('similar_slug_warning') if show_similar_slugs_warning?(@edition) %>
+
+    <% if @edition.scheduled_publication %>
+      <% if force_scheduler.can_transition? && !force_scheduler.can_perform? %>
+        <section class='alert alert-danger'>
+          <p>This edition cannot be scheduled because: <%= force_scheduler.failure_reason %></p>
+        </section>
+      <% end %>
+    <% else %>
+      <% if force_publisher.can_transition? && !force_publisher.can_perform? %>
+        <section class='alert alert-danger'>
+          <p>This edition cannot be force-published because:</p>
+          <ul>
+            <% force_publisher.failure_reasons.each do |reason| %>
+              <li><%= reason %></li>
+            <% end %>
+          </ul>
+        </section>
+      <% end %>
+    <% end %>
+
+    <%= render 'admin/links_reports/links_report', links_report: (@edition.links_reports.last || @edition.links_reports.build) %>
+
+    <%= render partial: "history_state", locals: { edition: @edition } %>
+    <% if @edition.imported? %>
+      <%= render partial: 'speed_tagging' %>
+    <% else %>
+      <%= sidebar_tabs edition_tabs(@edition, remarks_count: @edition_remarks.length, history_count: @edition_history.total_count), class: 'remarks-history' do |tabs| %>
+        <%= tabs.pane class: "audit-trail", id: "notes" do %>
+          <h1>Notes</h1>
+          <%= link_to "Add new remark", new_admin_edition_editorial_remark_path(@edition), class: "btn btn-default add-remark" %>
+          <%= render_editorial_remarks_in_sidebar(@edition_remarks, @edition) %>
+        <% end %>
+
+        <%= tabs.pane class: "audit-trail", id: "history" do %>
+          <div class="audit-trail-page">
+            <h1>Activity</h1>
+            <%= paginate @edition_history, theme: 'audit_trail' %>
+            <ul class="list-unstyled">
+              <%= render partial: "audit_trail_entry", collection: @edition_history %>
+            </ul>
+            <%= paginate @edition_history, theme: 'audit_trail' %>
+          </div>
+        <% end %>
+
+        <% if @edition.can_be_fact_checked? %>
+          <%= tabs.pane class: "fact_checking", id: "fact_checking" do %>
+            <h1>Fact checking</h1>
+            <%= render partial: 'fact_check_responses', locals: {edition: @edition}  %>
+            <section class="request">
+              <h1>Send request</h1>
+              <%= form_for [:admin, @edition, FactCheckRequest.new] do |f| %>
+                <%= f.text_field :email_address %>
+                <%= f.text_area :instructions, cols: nil, rows: nil, label_text: "Extra instructions" %>
+                <%= f.submit 'Send request', class: "btn btn-default" %>
+              <% end %>
+            </section>
+          <% end %>
+        <% end %>
+      <% end %>
+    <% end %>
+  </div>
+</div>

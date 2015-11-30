@@ -1,0 +1,455 @@
+id:
+  activerecord:
+    attributes:
+      attachment:
+        hoc_paper_number:
+        isbn:
+        unnumbered_hoc_paper:
+      attachment_data:
+        file:
+      corporate_information_page/corporate_information_page_attachments/attachment:
+        command_paper_number:
+        hoc_paper_number:
+        isbn:
+        order_url:
+        price:
+        title:
+        unique_reference:
+        unnumbered_hoc_paper:
+      corporate_information_page/corporate_information_page_attachments/attachment/attachment_data:
+        file:
+      policy_group/policy_group_attachments/attachment/attachment_data:
+        file:
+      response/consultation_response_attachments/attachment:
+        command_paper_number:
+        hoc_paper_number:
+        isbn:
+        order_url:
+        price:
+        title:
+        unique_reference:
+        unnumbered_hoc_paper:
+      response/consultation_response_attachments/attachment/attachment_data:
+        file:
+    nested_attachment_data_field_names:
+      file:
+    nested_attachment_field_names:
+      command_paper_number:
+      hoc_paper_number:
+      isbn:
+      order_url:
+      price:
+      title:
+      unique_reference:
+      unnumbered_hoc_paper:
+  announcements:
+    heading: Pengumuman
+    view_all:
+  attachment:
+    accessibility:
+      full_help_html: Untuk mendapatkan dokumen ini dalam format lain seperti braille,
+        audio atau format lainnya silahkan kirimkan email %{email} yang berisi alamat
+        Anda, nomor telepon dan judul dokumen yang diinginkan ("%{title}")%{references}.
+      heading: File ini tidak sesuai dengan pengguna teknologi bantu.
+      request_a_different_format: Meminta format lain.
+    headings:
+      order_a_copy: Memesan salinan
+      order_a_copy_full: Memesan salinan dokumen
+      published: Diterbitkan
+      reference: Ref
+      unnumbered_command_paper:
+      unnumbered_hoc_paper:
+    opendocument:
+      help_html:
+    see_more:
+  change_notes:
+    page_history:
+    published_at:
+    see_all_updates:
+    updated_at:
+  contact:
+    contact_form: Formulir kontak
+    email: Email
+  corporate_information_page:
+    type:
+      about:
+      about_our_services:
+      access_and_opening:
+      complaints_procedure:
+      equality_and_diversity:
+      media_enquiries:
+      membership:
+      our_energy_use:
+      our_governance:
+      personal_information_charter: Piagam informasi pribadi
+      petitions_and_campaigns:
+      procurement:
+      publication_scheme: Skema publikasi
+      recruitment:
+      research:
+      social_media_use: Penggunaan media sosial
+      staff_update:
+      statistics:
+      terms_of_reference:
+      welsh_language_scheme: Skema bahasa Wales
+  date:
+    formats:
+      default: "%d %B %Y"
+      long_ordinal: "%e %B %Y"
+  detailed_guidance:
+    back_to_contents:
+    contents:
+    more:
+    part_of_published_collection:
+    published_related_detailed_guides:
+    related_mainstream_content:
+    see_more_like_this:
+  document:
+    contents:
+    footer_meta:
+      full_page_history:
+      page_history:
+      published:
+      updated:
+    headings:
+      applies_to_nations: Diterapkan pada
+      attachments:
+        one: Dokumen
+        other: Dokumen-dokumen
+      field_of_operation: Area operasi
+      from:
+      location:
+      part_of:
+    published: Diterbitkan
+    read: Baca artikel %{title}
+    speech:
+      author_title:
+        minister: Menteri
+        speaker: Penulis
+      delivered_on: 'Dikirimkan pada:'
+      delivery_title:
+        minister: Menteri
+        speaker: Pembicara
+      written_on: 'Dituliskan pada:'
+    type:
+      announcement:
+        one: Pengumuman
+        other: Pengumuman-pengumuman
+      authored_article:
+        one: Artikel yang ditulis
+        other: Artikel-artikel yang ditulis
+      case_study:
+        one: Studi kasus
+        other: Studi-studi kasus
+      closed_consultation:
+        one: Konsultasi tertutup
+        other: Konsultasi-konsultasi tertutup
+      consultation:
+        one: Konsultasi
+        other: Konsultasi-konsultasi
+      consultation_outcome:
+        one: Hasil konsultasi
+        other: Hasil-hasil konsultasi
+      corporate_report:
+        one: Laporan korporat
+        other: Laporan-laporan korporat
+      correspondence:
+        one: Koresponden
+        other: Koresponden-koresponden
+      decision:
+        one:
+        other:
+      detailed_guidance:
+        one: Panduan lebih lanjut
+        other: Panduan lebih lanjut
+      document_collection:
+        one: Serial
+        other:
+      draft_text:
+        one: Rancangan teks
+        other: Rancangan tulisan
+      fatality_notice:
+        one: Pemberitahuan kematian
+        other: Pemberitahuan-pemberitahuan kematian
+      foi_release:
+        one: Rilis FOI
+        other: Rilis FOI
+      form:
+        one: Formulir
+        other: Formulir-formulir
+      government_response:
+        one: Respon Pemerintah
+        other: Respon-respon Pemerintah
+      guidance:
+        one: Panduan
+        other: Panduan
+      impact_assessment:
+        one: Penilaian dampak
+        other: Penilaian-penilaian dampak
+      imported:
+        one: Diimpor-menunggu tipe
+        other: Diimpor-menunggu tipe
+      independent_report:
+        one: Laporan independen
+        other: Laporan-laporan independen
+      international_treaty:
+        one:
+        other:
+      map:
+        one: Peta
+        other: Peta-peta
+      national_statistics:
+        one: Statistik-statistik nasional
+        other: Statistik-statistik nasional
+      news_article:
+        one: Artikel berita
+        other: Artikel-artikel berita
+      news_story:
+        one: Berita
+        other: Berita-berita
+      notice:
+        one:
+        other:
+      open_consultation:
+        one: Konsultasi terbuka
+        other: Konsultasi-konsultasi terbuka
+      oral_statement:
+        one: Pernyataan langsung kepada parlemen
+        other: Pernyataan-pernyataan langsung kepada parlemen
+      policy_paper:
+        one: Laporan kebijakan
+        other: Laporan-laporan kebijakan
+      press_release:
+        one: Rilis pers
+        other: Rilis pers
+      promotional:
+        one: Materi promosi
+        other: Materi promosi
+      publication:
+        one: Publikasi
+        other: Publikasi-publikasi
+      regulation:
+        one:
+        other:
+      research:
+        one: Riset dan analisis
+        other: Riset dan analisis
+      speaking_notes:
+        one: Naskah Pembicara
+        other: Naskah Pembicara
+      speech:
+        one: Pidato
+        other: Pidato-pidato
+      statement_to_parliament:
+        one: Pernyatan kepada Parlemen
+        other: Pernyataan-pernyaatan kepada Parlemen
+      statistical_data_set:
+        one: Set data statistik
+        other: Set data statistik
+      official_statistics:
+        one: Statistik
+        other: Statistik-statistik
+      statutory_guidance:
+        one:
+        other:
+      transcript:
+        one: Transkrip
+        other: Transkrip-transkrip
+      transparency:
+        one: Transparansi data
+        other: Transparansi data
+      worldwide_priority:
+        one: Prioritas di penjuru dunia
+        other: Prioritas-prioritas di penjuru dunia
+      written_statement:
+        one: Pernyataan tertulis kepada parlemen
+        other: Pernyataan-pernyatan tertulis kepada parlemen
+    updated: Terkini
+    view: Lihat '%{title}'
+  document_filters:
+    description: Silahkan gunakan bantuan filter untuk menunjukkan hasil yang hanya
+      sesuai dengan keinginan Anda
+    no_results:
+      description: Mohon perluas pencarian Anda dan coba kembali
+      title: Dokumen tidak ditemukan
+      tna_heading:
+      tna_link:
+    world_locations:
+      all: Semua lokasi
+      label: Lokasi-lokasi di dunia
+  feeds:
+    email:
+    feed:
+    get_updates_to_this_list:
+    latest_activity: Aktivitas terbaru
+  i18n:
+    direction: ltr
+  language_names:
+    id: Bahasa Indonesia
+  latest_feed:
+    no_updates: Belum ada informasi terkini
+    title: Terkini
+  national_statistics:
+    heading:
+  number:
+    human:
+      storage_units:
+        format: "%n%u"
+  organisation:
+    about:
+      read_more: Baca lebih lanjut mengenai kerja kami
+    corporate_information:
+      access_our_info: Akses informasi kami
+      foi_how_to: Bagaimana membuat permintaan FOI
+      foi_releases: Rilis-rilis FOI
+      jobs_and_contacts: Pekerjaan dan kontrak
+      organisation_chart:
+      transparency: Transparansi data
+    foi_exemption_html:
+    headings:
+      chief_professional_officers: Para kepala pejabat profesional kami
+      contact: Hubungi %{name}
+      corporate_information: Informasi korporat
+      corporate_reports: Laporan korporat
+      documents:
+      freedom_of_information_act:
+      making_foi_requests:
+      our_announcements: Pengumuman-pengumuman kami
+      our_consultations:
+      our_judges:
+      our_management: Manajemen kami
+      our_ministers: Menteri-menteri kami
+      our_policies: Kebijakan-kebijakan kami
+      our_publications: Publikasi-publikasi kami
+      our_senior_military_officials: Para pejabat militer senior kami
+      our_services: Pelayanan-pelayanan kami
+      our_statistics: Statistik-statistik kami
+      our_topics: Kami bekerja pada bidang-bidang ini
+      special_representatives: Perwakilan khusus
+      traffic_commissioners: Komisioner lalu lintas
+      what_we_do: Kerja kami
+      who_we_are:
+    making_foi_requests:
+      step1_html:
+      step2_html:
+      step3_html:
+  people:
+    biography:
+    heading:
+      one:
+      other:
+    previous_roles:
+    previous_roles_in_government:
+    read_more:
+  policies:
+    heading: Kebijakan-kebijakan
+    view_all:
+  publications:
+    heading: Publikasi-publikasi
+    headings:
+      detail: Detail
+  read_more: Baca lebih lanjut
+  roles:
+    heading:
+      one:
+      other:
+    headings:
+      current_holder:
+      previous_holders:
+      responsibilities:
+    ministerial:
+    policies_responsible_with_person:
+    previous_holders:
+    read_more:
+  see_all:
+    announcement: Lihat semua pengumuman-pengumuman
+    authored_article: Lihat semua artikel-artikel yang ditulis
+    case_study: Lihat semua studi-studi kasus
+    closed_consultation: Lihat semua konsultasi-konsultasi tertutup
+    consultation: Lihat semua konsultasi-konsultasi
+    consultation_outcome: Lihat semua hasil-hasil konsultasi
+    corporate_report: Lihat semua laporan-laporan korporat
+    correspondence: Lihat semua koresponden-koresponden
+    decision:
+    detailed_guidance: Lihat semua panduan lebih lanjut
+    document_collection:
+    draft_text: Lihat semua rancangan tulisan
+    fatality_notice: Lihat semua pemberitahuan-pemberitahuan kematian
+    foi_release: Lihat semua rilis foi
+    form: Lihat semua formulir-formulir
+    government_response: Lihat semua respon-respon pemerintah
+    guidance: Lihat semua panduan
+    impact_assessment: Lihat semua penilaian-penilaian dampak
+    imported: Lihat semua diimpor-menunggu tipe
+    international_treaty:
+    map: Lihat semua peta-peta
+    national_statistics: Lihat semua statistik-statistik nasional
+    news_article: Lihat semua artikel-artikel berita
+    news_story: Lihat semua berita-berita
+    notice:
+    open_consultation: Lihat semua konsultasi-konsultasi terbuka
+    oral_statement: Lihat semua pernyataan-pernyataan langsung kepada parlemen
+    policy: Lihat semua kebijakan-kebijakan
+    policy_paper: Lihat semua laporan-laporan kebijakan
+    press_release: Lihat semua rilis pers
+    promotional: Lihat semua materi promosi
+    publication: Lihat semua publikasi-publikasi
+    regulation:
+    research: Lihat semua riset dan analisis
+    speaking_notes: Lihat semua naskah pembicara
+    speech: Lihat semua pidato-pidato
+    statement_to_parliament: Lihat semua pernyataan-pernyaatan kepada parlemen
+    statistical_data_set: Lihat semua set data statistik
+    statistics: Lihat semua statistik-statistik
+    statutory_guidance:
+    transcript: Lihat semua transkrip-transkrip
+    transparency: Lihat semua transparansi data
+    worldwide_priority: Lihat semua prioritas-prioritas di penjuru dunia
+    written_statement: Lihat semua pernyataan-pernyatan tertulis kepada parlemen
+  social_media:
+    follow_us:
+  support:
+    array:
+      last_word_connector: dan
+  time:
+    formats:
+      long_ordinal: "%e %B %Y %H:%M"
+  world_location:
+    headings:
+      announcements: Pengumuman kami
+      country: Negara
+      documents: Dokumen-dokumen
+      mission: Misi kami
+      organisations: Organisasi-organisasi
+      priorities: Kebijakan-kebijakan
+      publications: Publikasi-publikasi kami
+      quick_links: Tautan cepat
+      related_policies: Kebijakan terkait
+      statistics: Statistik-statistik kami
+    type:
+      international_delegation:
+        one: Delegasi internasional
+        other: Delegasi-delegasi internasional
+      world_location:
+        one: Lokasi dunia
+        other: Lokasi-lokasi dunia
+  worldwide_organisation:
+    corporate_information:
+      about_our_services_html:
+      personal_information_charter_html: "%{link} menjelaskan tentang bagaimana kami
+        memperlakukan informasi pribadi Anda"
+      publication_scheme_html: Baca jenis-jenis informasi yang secara rutin kami muat
+        di %{link}
+      social_media_use_html: Baca kebijakan kami di %{link}
+      welsh_language_scheme_html: Informasi lebih lanjut mengenai komitmen kami dalam
+        memuat informasi di %{link}
+    find_out_more: Baca profil keseluruhan dan semua rincian kontak
+    headings:
+      about_us: Tentang kami
+      contact_us: Hubungi kami
+      corporate_information: Informasi korporat
+      follow_us: Ikuti kami
+      our_people: Staf kami
+      our_services: Pelayanan kami
+    location: Lokasi
+    part_of: Bagian dari

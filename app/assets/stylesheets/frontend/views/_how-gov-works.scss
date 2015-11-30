@@ -1,0 +1,404 @@
+.inside_gov_how-gov-works {
+  .full-width-section{
+    clear:both;
+  }
+
+  p, li{
+    @include ig-core-19;
+    a {
+      text-decoration: underline;
+    }
+  }
+
+  li {
+    margin-left: $gutter;
+  }
+
+  .thirds-width-section,
+  .halves-width-section {
+    overflow:visible;
+    clear:both;
+    margin-top:$gutter - $gutter-one-sixth;
+    margin-bottom:$gutter-two-thirds;
+    @extend %contain-floats;
+    img {
+      width: $full-width;
+      height: auto;
+    }
+
+    .inner-block {
+      padding: 0;
+    }
+
+    @include media(tablet) {
+      margin-left:-$gutter-half;
+      margin-right:-$gutter-half;
+
+      .inner-block {
+        padding: 0 $gutter-half;
+      }
+
+      .two-thirds {
+        width: $two-thirds;
+        margin-bottom: $gutter;
+        float: left;
+      }
+      .one-third {
+        width: $one-third;
+        margin-bottom: $gutter;
+        float: left;
+      }
+      .one-half {
+        width: $half;
+        margin-bottom: $gutter;
+        float: left;
+      }
+    }
+  }
+
+  .depts {
+    .two-thirds,
+    .one-third {
+      margin-bottom: 0;
+    }
+  }
+
+  .ministers{
+    margin-bottom: $gutter*2;
+  }
+
+  .coalition {
+    margin-top: $gutter;
+
+    @include media(tablet) {
+      margin-top: 0;
+    }
+
+    p{
+      background-color:$panel-colour;
+      padding:$gutter-half;
+      margin-top:-0.5em;
+    }
+  }
+
+  .feature-value{
+    font-size:5em;
+    padding-bottom:0;
+    margin:0 0 ($gutter-one-third * -1);
+    color:$grey-1;
+    font-weight: bold;
+    display:block;
+    line-height:1em;
+    a {
+      text-decoration: none;
+      color: $black;
+      &:hover,
+      &:focus {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .feature-caption {
+    @include ig-core-16;
+    display: block;
+    padding-bottom: $gutter;
+  }
+
+  .feature-ministers{
+    p {
+      text-align: center;
+      color: #999;
+      @include ig-core-48;
+      padding: $gutter-half 0 $gutter;
+    }
+
+    span.circle {
+      display: inline-block;
+      text-align: center;
+      padding: 0;
+      vertical-align: middle;
+      width: 17%;
+      a {
+        text-decoration: none;
+        &:hover,
+        &:focus {
+          text-decoration: underline;
+        }
+      }
+
+      .count {
+        @include core-48;
+        position: relative;
+        top: $gutter-one-third;
+        padding: 0;
+        margin: 0 0 $gutter-one-sixth 0;
+
+        font-size: 1.9em;
+        font-weight: bold;
+        display: block;
+        line-height: 1em;
+        a {
+          color:$black;
+        }
+      }
+
+      @include media(tablet) {
+        background-color:transparent;
+        border:0.1em solid $inside-gov-secondary;
+        width:3.8em;
+        height:3.8em;
+        -moz-border-radius: 2em;
+        -webkit-border-radius: 2em;
+        border-radius: 5em;
+
+        &:hover {
+          background-color: darken($inside-gov-secondary,10%);
+          border-color: darken($inside-gov-secondary,10%);
+        }
+
+        a {
+          &:hover,
+          &:focus {
+            text-decoration: none;
+          }
+        }
+
+        .count{
+          padding-top: 0.35em;
+          font-size: 1.9em;
+          font-weight: bold;
+          width:100%;
+          text-align:center;
+        }
+      }
+
+      span{
+        color:black;
+        @include ig-core-16;
+        display: block;
+        padding: 0;
+        margin: 0;
+      }
+    }
+
+    @include media(tablet) {
+      span.invert {
+        background-color: $inside-gov-secondary;
+        border-color: $inside-gov-secondary;
+
+        &:hover {
+          background-color: darken($inside-gov-secondary,10%);
+          border-color: darken($inside-gov-secondary,10%);
+        }
+
+
+        .count a, .caption {
+          color: black;
+        }
+      }
+    }
+  }
+
+  .ministers .caption {
+    max-width: 26em;
+  }
+
+  h2 {
+    @include ig-core-36;
+    padding-bottom: 1px;
+    border-bottom: 5px solid black;
+    margin: $gutter 0 $gutter;
+    clear:both;
+
+    @include media(tablet) {
+      margin-top: $gutter*2;
+    }
+  }
+
+  h3 {
+    @include ig-core-27;
+    font-weight: bold;
+    margin: 0 0 $gutter-two-thirds;
+    width: $full-width;
+    &.with-gutter {
+      margin-top: $gutter-half;
+    }
+  }
+
+  .prime-minister,
+  .dep-prime-minister {
+    h3 {
+      @include ig-core-27;
+      font-weight: bold;
+    }
+  }
+
+  .depts-cont,
+  .gov-types {
+    h3 {
+      @include ig-core-19;
+      font-weight: bold;
+      margin-bottom: 0;
+    }
+  }
+
+  .gov-types, .ministers, .cabinet, .coalition {
+    h3{
+      border-top:1px solid $border-colour;
+      padding-top:$gutter - $gutter-one-sixth;
+    }
+  }
+
+  .ministers {
+    h3 {
+      margin-bottom: 0;
+      @include media(tablet) {
+        margin-bottom: $gutter-half;
+      }
+    }
+  }
+
+  h4 {
+    @include ig-core-19;
+    font-weight: bold;
+    &.with-gutter {
+      margin-top: $gutter-half;
+    }
+  }
+  .block {
+    float: none;
+    display: block;
+    width: $full-width;
+  }
+
+  p.small-print {
+    @include ig-core-14;
+  }
+  h2.coalition {
+    border-color: black;
+  }
+  .coalition h3 {
+    border-color: black;
+    border-width: $gutter-one-sixth;
+    padding-top: $gutter - 9px;
+  }
+
+  hr.keyline {
+    margin: 0;
+    border: solid $border-colour;
+    border-width: 0 0 1px;
+  }
+
+  @media (min-width: 640px) and (max-width: 900px) {
+    .prime-minister,
+    .history {
+      .one-half {
+        width: $two-thirds;
+        &:first-child {
+          width: $one-third;
+        }
+      }
+    }
+
+    .cabinet {
+      .two-thirds,
+      .one-third {
+        width: $half;
+      }
+    }
+
+    .legislation,
+    .access-information {
+      .one-third {
+        float: right;
+        width: $two-thirds;
+        &:first-child {
+          float: left;
+          width: $one-third;
+        }
+      }
+    }
+
+    .depts-cont .one-third:nth-child(2),
+    .legislation .one-third:nth-child(4),
+    .access-information .one-third:nth-child(2) {
+      margin-bottom: $gutter-half;
+    }
+
+    .gov-types {
+      .one-third {
+        width: $full-width;
+      }
+    }
+  }
+
+  @include media(tablet) {
+    .legislation,
+    .access-information {
+      .one-third {
+        float: right;
+        &:first-child {
+          float: left;
+          width: $one-third;
+        }
+      }
+    }
+    .legislation {
+      .two-thirds {
+        margin-bottom: $gutter-one-third;
+      }
+    }
+  }
+
+  @media (min-width: 640px) and (max-width: 760px) {
+    .feature-ministers {
+      p {
+        font-size: $gutter;
+      }
+      span.circle .count {
+        top: $gutter-one-sixth;
+      }
+      span.circle .caption {
+        position: relative;
+        top: -10px;
+        @include ig-core-14;
+        line-height: 1;
+      }
+    }
+  }
+
+  @media (min-width: 761px) and (max-width: 980px) {
+    .feature-ministers {
+      p {
+        font-size: 35px;
+      }
+      span.circle .count {
+        top: $gutter-one-sixth;
+      }
+      span.circle .caption {
+        position: relative;
+        top: -10px;
+        @include ig-core-14;
+        line-height: 1;
+      }
+    }
+  }
+
+  @media (min-width: 811px) and (max-width: 980px) {
+    .feature-ministers {
+      p {
+        font-size: 39px;
+      }
+      span.circle .count {
+        top: $gutter-one-sixth;
+      }
+      span.circle .caption {
+        position: relative;
+        top: -5px;
+        @include ig-core-14;
+      }
+    }
+  }
+
+}

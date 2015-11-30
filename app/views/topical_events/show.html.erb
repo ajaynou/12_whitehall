@@ -1,0 +1,166 @@
+<% page_title @classification.name %>
+<% page_class "topical-events-show" %>
+<% atom_discovery_link_tag atom_feed_url_for(@classification), "Latest activity on #{@classification.name}" %>
+
+<%= content_tag_for(:div, @classification, class: "classification #{@classification.class.name.underscore}") do %>
+
+  <% if @classification.beta? %>
+    <div class="inner-block">
+      <%= render 'govuk_component/beta_label',
+            message: "This page is in <a href='/help/beta'>beta</a>. " +
+            "We'll be updating it regularly and welcome <a href='/contact/govuk'>your feedback</a>." %>
+    </div>
+  <% end %>
+
+  <header class="block headings-block">
+    <div class="inner-block floated-children">
+      <%= render partial: 'shared/heading',
+                locals: { type: 'Topic',
+                          heading: "#{h(@classification.name)}#{' <span class="archived">(Archived)</span>' if @classification.archived?}".html_safe,
+                          big: true, extra: true } %>
+      <% if @classification.logo_url.present? %>
+        <div class="heading-extra topical-event-logo">
+          <div class="heading-inner">
+            <%= image_tag(@classification.logo_url(:s300), alt: @classification.logo_alt_text) if @classification.logo_url %>
+          </div>
+        </div>
+      <% end %>
+      <% if @classification.organisations.any? %>
+        <aside class="meta metadata-list">
+          <div class="inner-heading">
+            <dl>
+              <dt><%= t('document.headings.organisations', count: @classification.organisations.length) %>:</dt>
+              <dd>
+                <%= render  partial: 'organisations/organisations_name_list',
+                            locals: { organisations: @classification.organisations } %>
+              </dd>
+            </dl>
+          </div>
+        </aside>
+      <% end %>
+    </div>
+  </header>
+
+  <div class="block">
+    <div class="inner-block">
+      <div class="page-description">
+        <section class="description">
+          <%= govspeak_to_html @classification.description %>
+          <% if @classification.about_page.present? %>
+            <p class="read-more">
+              <%= link_to @classification.about_page.read_more_link_text, topical_event_about_pages_path(@classification) %>
+            </p>
+          <% end %>
+          <% if @classification.social_media_accounts.any? %>
+            <%= render partial: 'shared/social_media_accounts',
+                       locals: { socialable: @classification, followus: true } %>
+          <% end %>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <div class="block">
+    <div class="inner-block">
+      <section class="featured-news items-<%= @featurings.length %>">
+        <% if @featurings.any? %>
+          <%= render partial: 'classifications/classification_featuring',
+                   collection: @featurings %>
+        <% end %>
+        <%= render partial: 'shared/recently_updated',
+                   locals: { recently_updated: @recently_changed_documents,
+                           atom_url: atom_feed_url_for(@classification),
+                           extra_class: 'panel',
+                           see_all_link: latest_path(topics: [@classification]) } %>
+      </section>
+    </div>
+  </div>
+
+  <div class="documents-grid <%= topic_grid_size_class(@publications, @consultations, @announcements) %>">
+    <div class="inner-block">
+      <%= render(partial: 'document_list', locals: { documents: @publications, type: :publications }) if @publications.any? %>
+      <%= render(partial: 'document_list', locals: { documents: @consultations, type: :consultations }) if @consultations.any? %>
+      <%= render(partial: 'document_list', locals: { documents: @announcements, type: :announcements }) if @announcements.any? %>
+
+      <% if @detailed_guides.any? %>
+        <section id="detailed-guidance" class="document-block documents-<%= document_block_counter %>">
+          <h1 class="label">Detailed guidance</h1>
+          <div class="content">
+            <ol class="document-list">
+              <% @detailed_guides.each do |detailed_guide| %>
+                <%= content_tag_for :li, detailed_guide, class: 'document-row' do %>
+                  <h2><%= link_to detailed_guide.title, public_document_path(detailed_guide) %></h2>
+                <% end %>
+              <% end %>
+            </ol>
+          </div>
+        </section>
+      <% end %>
+      <% if @related_classifications.any? %>
+        <section id="related-topics" class="document-block documents-<%= document_block_counter %>">
+          <h1 class="label">Related policy areas</h1>
+          <div class="content">
+            <ol class="document-list">
+              <% @related_classifications.each do |topic| %>
+                <%= content_tag_for :li, topic, class: 'document-row' do %>
+                  <h2><%= link_to topic.name, topic_path(topic) %></h2>
+                <% end %>
+              <% end %>
+            </ol>
+          </div>
+        </section>
+      <% end %>
+    </div>
+  </div>
+
+
+  <div class="block heading-block">
+    <div class="inner-block">
+      <% if @classification.lead_organisations.any? %>
+        <section id="organisations" class="organisations">
+          <div class="head-section">
+            <h1 class="label">Who&rsquo;s involved</h1>
+          </div>
+          <div class="content">
+            <ul>
+              <% @classification.lead_organisations.each do |organisation| %>
+                <%= content_tag_for(:li, organisation, class: organisation_brand_colour_class(organisation)) do %>
+                  <%= link_to organisation_path(organisation),
+                        class: logo_classes(organisation: organisation, stacked: true) do %>
+                    <span><%= organisation_logo_name(organisation) %></span>
+                  <% end %>
+                <% end %>
+              <% end %>
+              <% if @classification.slug == 'first-world-war-centenary' %>
+                <li class="non-govuk imperial-war-museums">
+                  <a href="http://www.iwm.org.uk">Imperial War Museums</a>
+                </li>
+                <li class="non-govuk english-heritage">
+                  <a href="http://www.english-heritage.org.uk">English Heritage</a>
+                </li>
+                <li class="non-govuk commonwealth-war-graves-commission">
+                  <a href="http://www.cwgc.org">Commonwealth War Graves Commission</a>
+                </li>
+                <li class="non-govuk arts-council-england">
+                  <a href="http://www.artscouncil.org.uk">Arts Council England</a>
+                </li>
+                <li class="non-govuk bbc">
+                  <a href="http://www.bbc.co.uk">BBC</a>
+                </li>
+                <li class="non-govuk british-library">
+                  <a href="http://www.bl.uk">British Library</a>
+                </li>
+                <li class="non-govuk heritage-lottery-fund">
+                  <a href="http://www.hlf.org.uk/ThenAndNow">Heritage Lottery Fund</a>
+                </li>
+                <li class="non-govuk war-memorials-trust">
+                  <a href="http://www.warmemorials.org">War Memorials Trust</a>
+                </li>
+              <% end %>
+            </ul>
+          </div>
+        </section>
+      <% end %>
+    </div>
+  </div>
+<% end %>

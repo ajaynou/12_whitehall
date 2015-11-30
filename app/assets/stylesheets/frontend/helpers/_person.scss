@@ -1,0 +1,130 @@
+.person-excerpt {
+  list-style: none;
+  clear: left;
+  @include media(tablet) {
+    clear: none;
+  }
+
+  @include media(tablet) {
+    float: left;
+    width: $one-quarter;
+
+    &.clear-person {
+      clear: both;
+    }
+  }
+
+  .inner {
+    padding: $gutter-half;
+    @extend %contain-floats;
+  }
+
+  .blank-person {
+    width: $one-third;
+    float: left;
+    @include right-to-left {
+      float: right;
+    }
+    @include media(tablet) {
+      width: $full-width;
+      float: none;
+    }
+    .blank-person-inner {
+      display: block;
+      padding: 0 $gutter-half 0 0;
+      @include right-to-left {
+        padding: 0 0 0 $gutter-half;
+      }
+      @include media(tablet) {
+        padding: 0;
+      }
+      &:after {
+        background: $grey-4;
+        content: '';
+        display: block;
+        padding-top: 66.667%; // This percentage allows the .blank-person-inner to have an aspect ratio like an image
+        margin-bottom: 8px;
+      }
+    }
+  }
+
+  .image-holder  {
+    width: $one-third;
+    float: left;
+    @include right-to-left {
+      float: right;
+    }
+    @include media(tablet) {
+      width: $full-width;
+      float: none;
+    }
+
+    .img {
+      display: block;
+      padding: 0 $gutter-half 0 0;
+      @include right-to-left {
+        padding: $gutter-one-third 0 0 $gutter-half;
+      }
+      @include media(tablet) {
+        padding: 0;
+      }
+
+      img {
+        width: $full-width;
+      }
+    }
+  }
+
+  .text {
+    float: left;
+    width: $two-thirds;
+    @include media(tablet) {
+      float: none;
+      width: $full-width;
+    }
+    .current-appointee {
+      padding-top: 0;
+      a {
+        &:hover,
+        &:focus,
+        &:active {
+          text-decoration: none;
+
+          strong {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
+    .role {
+      @include core-14;
+      padding-top: $gutter-one-sixth;
+
+      a {
+        text-decoration: none;
+        &:hover,
+        &:focus,
+        &:active {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  span {
+    display: block;
+    @include core-14;
+    color: $secondary-text-colour;
+  }
+  strong {
+    display: block;
+    @include core-19;
+    font-weight: bold;
+  }
+  &.privy_counsellor strong {
+    padding-top: 0;
+  }
+
+
+}

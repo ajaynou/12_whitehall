@@ -1,0 +1,2 @@
+class MilitaryRole < Role
+end

@@ -1,0 +1,6 @@
+<% page_title "World locations" %>
+<h1>World locations</h1>
+
+<%= render partial: "world_location_table", locals: {title: "Active", world_locations: @active_world_locations } %>
+
+<%= render partial: "world_location_table", locals: {title: "Inactive", world_locations: @inactive_world_locations } %>

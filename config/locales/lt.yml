@@ -1,0 +1,503 @@
+lt:
+  document:
+    headings:
+      attachments:
+        one: Dokumentas
+        few:
+        other: Dokumentai
+      applies_to_nations: Susiję su
+      field_of_operation: Veiklos laukas
+      from:
+      location:
+      part_of:
+    type:
+      announcement:
+        one: Pranešimas
+        few:
+        other: Pranešimai
+      authored_article:
+        one: Autoriaus straipsnis
+        few:
+        other: Autorių straipsniai
+      case_study:
+        one: Atvejo analizė
+        few:
+        other: Atvejų analizės
+      closed_consultation:
+        one: Pasibaigusi konsultacija
+        few:
+        other: Pasibaigusios konsultacijos
+      consultation:
+        one: Konsultacija
+        few:
+        other: Konsultacijos
+      consultation_outcome:
+        one: Konsultacijos rezultatas
+        few:
+        other: Konsultacijos rezultatai
+      corporate_report:
+        one: Bendra ataskaita
+        few:
+        other: Bendros ataskaitos
+      correspondence:
+        one: Korespondencija
+        few:
+        other: Korespondencija
+      decision:
+        one:
+        few:
+        other:
+      detailed_guidance:
+        one: Detalesnė informacija
+        few:
+        other: Detalesnė informacija
+      document_collection:
+        one: Serijos
+        few:
+        other:
+      draft_text:
+        one: Pirminis teksto variantas
+        few:
+        other: Pirminiai teksto variantai
+      fatality_notice:
+        one: Pranešimas apie nelaimę
+        few:
+        other: Pranešimas apie nelaimes
+      foi_release:
+        one: 'Informacijos laisvė: pranešimas'
+        few:
+        other: 'Informacijos laisvė: pranešimai'
+      form:
+        one: Forma
+        few:
+        other: Formos
+      government_response:
+        one: Vyriausybės atsakas
+        few:
+        other: Vyriausybės atsakai
+      guidance:
+        one: Informacija
+        few:
+        other: Informacija
+      impact_assessment:
+        one: Poveikio įvertinimas
+        few:
+        other: Poveikio įvertinimai
+      imported:
+        one: Patalpinta - laukiama publikavimo
+        few:
+        other: Patalpinta - laukiama publikavimo
+      independent_report:
+        one: Nepriklausoma ataskaita
+        few:
+        other: Nepriklausomos ataskaitos
+      international_treaty:
+        one:
+        few:
+        other:
+      map:
+        one: "Žemėlapis"
+        few:
+        other: "Žemėlapiai"
+      national_statistics:
+        one: 'Statistika - nacionalinė statistika '
+        few:
+        other: 'Statistika - nacionalinė statistika '
+      news_article:
+        one: Straipsnis
+        few:
+        other: Straipsniai
+      news_story:
+        one: Naujiena
+        few:
+        other: Naujienos
+      notice:
+        one:
+        few:
+        other:
+      open_consultation:
+        one: Atvira konsultacija
+        few:
+        other: 'Atviros konsultacijos '
+      oral_statement:
+        one: "Žodinis kreipimasis į parlamentą"
+        few:
+        other: "Žodiniai kreipimaisi į parlamentą"
+      policy_paper:
+        one: Strategijos dokumentas
+        few:
+        other: Strategijų dokumentai
+      press_release:
+        one: Pranešimas spaudai
+        few:
+        other: Pranešimai spaudai
+      promotional:
+        one: Reklaminė medžiaga
+        few:
+        other: Reklaminė medžiaga
+      publication:
+        one: Leidinys
+        few:
+        other: Leidiniai
+      regulation:
+        one:
+        few:
+        other:
+      research:
+        one: Tyrimas ir analizė
+        few:
+        other: Tyrimai ir analizės
+      speaking_notes:
+        one: Kalbos santrauka
+        few:
+        other: Kalbos santrauka
+      speech:
+        one: Kalba
+        few:
+        other: Kalbos
+      statement_to_parliament:
+        one: Kreipimasis į parlamentą
+        few:
+        other: Kreipimaisi į parlamentą
+      statistical_data_set:
+        one: Statistiniai duomenys
+        few:
+        other: Statistiniai duomenys
+      official_statistics:
+        one: Statistika
+        few:
+        other: Statistika
+      statutory_guidance:
+        one:
+        few:
+        other:
+      transcript:
+        one: Kalbos tekstas
+        few:
+        other: Kalbų tekstai
+      transparency:
+        one: Skaidrumo informacija
+        few:
+        other: Skaidrumo informacija
+      worldwide_priority:
+        one: Pasaulinis pioritetas
+        few:
+        other: Pasauliniai prioritetai
+      written_statement:
+        one: Rašytinis kreipimasis į parlamentą
+        few:
+        other: Rašytiniai kreipimaisi į parlamentą
+    contents:
+    footer_meta:
+      full_page_history:
+      page_history:
+      published:
+      updated:
+    published: publikuota
+    read: 'Skaitykite straipsnį %{title} '
+    speech:
+      author_title:
+        minister: Ministras
+        speaker: Autorius
+      delivered_on: 'Pasakyta:'
+      delivery_title:
+        minister: Ministras
+        speaker: Pranešėjas
+      written_on: Parašyta
+    updated: atnaujinta
+    view: "Žiūrėkite '%{title}'"
+  people:
+    heading:
+      one:
+      few:
+      other:
+    biography:
+    previous_roles:
+    previous_roles_in_government:
+    read_more:
+  roles:
+    heading:
+      one:
+      few:
+      other:
+    headings:
+      current_holder:
+      previous_holders:
+      responsibilities:
+    ministerial:
+    policies_responsible_with_person:
+    previous_holders:
+    read_more:
+  world_location:
+    type:
+      international_delegation:
+        one: Tarptautinė delegacija
+        few:
+        other: Tarptautinės delegacijos
+      world_location:
+        one: Geografinė vieta
+        few:
+        other: Geografinės vietos
+    headings:
+      announcements: Mūsų skelbimai
+      country: "Šalis"
+      documents: Dokumentai
+      mission: Mūsų misija
+      organisations: Organizacijos
+      priorities: Prioritetai
+      publications: Mūsų publikacijos
+      quick_links: Greitos nuorodos
+      related_policies: Susijusios strategijos
+      statistics: Mūsų statistika
+  activerecord:
+    attributes:
+      attachment:
+        hoc_paper_number:
+        isbn:
+        unnumbered_hoc_paper:
+      attachment_data:
+        file:
+      corporate_information_page/corporate_information_page_attachments/attachment:
+        command_paper_number:
+        hoc_paper_number:
+        isbn:
+        order_url:
+        price:
+        title:
+        unique_reference:
+        unnumbered_hoc_paper:
+      corporate_information_page/corporate_information_page_attachments/attachment/attachment_data:
+        file:
+      policy_group/policy_group_attachments/attachment/attachment_data:
+        file:
+      response/consultation_response_attachments/attachment:
+        command_paper_number:
+        hoc_paper_number:
+        isbn:
+        order_url:
+        price:
+        title:
+        unique_reference:
+        unnumbered_hoc_paper:
+      response/consultation_response_attachments/attachment/attachment_data:
+        file:
+    nested_attachment_data_field_names:
+      file:
+    nested_attachment_field_names:
+      command_paper_number:
+      hoc_paper_number:
+      isbn:
+      order_url:
+      price:
+      title:
+      unique_reference:
+      unnumbered_hoc_paper:
+  announcements:
+    heading: Skelbimai
+    view_all:
+  attachment:
+    accessibility:
+      full_help_html: Jei norėtumėte gauti šį dokumentą kitokiu formatu (brailio,
+        audio ar pan.), siųskite el. paštą %{email}, parašydami savo adresą, telefoną
+        bei leidinio pavadinimą ("%{title}")%{references}.
+      heading: "Šis failas gali būti netinkamas, naudojantiems pagalbines technologijas."
+      request_a_different_format: Paprašykite kito formato
+    headings:
+      order_a_copy: Užsisakykite leidinį
+      order_a_copy_full: Užsisakykite leidinį
+      published: Publikuota
+      reference: Nuorodos
+      unnumbered_command_paper:
+      unnumbered_hoc_paper:
+    opendocument:
+      help_html:
+    see_more:
+  change_notes:
+    page_history:
+    published_at:
+    see_all_updates:
+    updated_at:
+  contact:
+    contact_form: Parašykite mums
+    email: El.paštas
+  corporate_information_page:
+    type:
+      about:
+      about_our_services:
+      access_and_opening:
+      complaints_procedure:
+      equality_and_diversity:
+      media_enquiries:
+      membership:
+      our_energy_use:
+      our_governance:
+      personal_information_charter: Asmeninės informacijos apsauga
+      petitions_and_campaigns:
+      procurement:
+      publication_scheme: Publikavimo schema
+      recruitment:
+      research:
+      social_media_use: Socialinės medijos naudojimas
+      staff_update:
+      statistics:
+      terms_of_reference:
+      welsh_language_scheme: Valų kalbos schema
+  date:
+    formats:
+      default: "%Y %B %d"
+      long_ordinal: "%Y %B %e"
+  detailed_guidance:
+    back_to_contents:
+    contents:
+    more:
+    part_of_published_collection:
+    published_related_detailed_guides:
+    related_mainstream_content:
+    see_more_like_this:
+  document_filters:
+    description: Galite naudoti filtrus &nbsp; kad būtų pateikiami tik jus dominantys&nbsp;
+      rezultatai
+    no_results:
+      description: Praplėskite paiešką ir bandykite dar kartą
+      title: Dokumentų  nerasta
+      tna_heading:
+      tna_link:
+    world_locations:
+      all: Visos geografinės vietos
+      label: Geografinės vietos pasaulyje
+  feeds:
+    email:
+    feed:
+    get_updates_to_this_list:
+    latest_activity: Paskutinės naujienos
+  i18n:
+    direction: ltr
+  language_names:
+    lt: Lietuvių
+  latest_feed:
+    no_updates: Atnaujinimų nėra
+    title: Paskutinės
+  national_statistics:
+    heading:
+  number:
+    human:
+      storage_units:
+        format: "%n%u"
+  organisation:
+    about:
+      read_more: Skaitykite daugiau apie mūsų veiklą
+    corporate_information:
+      access_our_info: Prieiga prie mūsų informacijos
+      foi_how_to: Kaip pateikti užklausymą informacijai gauti
+      foi_releases: 'Informacijos laisvė: pranešimai'
+      jobs_and_contacts: Darbai ir sutartys
+      organisation_chart:
+      transparency: Skaidrumo informacija
+    foi_exemption_html:
+    headings:
+      chief_professional_officers: Mūsų vyriausieji pareigūnai
+      contact: Susisiekite su %{name}
+      corporate_information: Korporatyvinė informacija
+      corporate_reports: Korporatyvinės ataskaitos
+      documents:
+      freedom_of_information_act:
+      making_foi_requests:
+      our_announcements: Mūsų skelbimai
+      our_consultations:
+      our_judges:
+      our_management: Mūsų vadovybė
+      our_ministers: Mūsų ministrai
+      our_policies: Mūsų strategijos
+      our_publications: Mūsų leidiniai
+      our_senior_military_officials: Mūsų vyriausieji kariuomenės pareigūnai
+      our_services: Mūsų paslaugos
+      our_statistics: Mūsų statistika
+      our_topics: Mes dirbame šiose srityse
+      special_representatives: Specialieji atstovai
+      traffic_commissioners: Eismo komisarai
+      what_we_do: Ką mes darome
+      who_we_are:
+    making_foi_requests:
+      step1_html:
+      step2_html:
+      step3_html:
+  policies:
+    heading: Strategijos
+    view_all:
+  publications:
+    heading: Leidiniai
+    headings:
+      detail: Detalesnė informacija
+  read_more: Skaitykite daugiau
+  see_all:
+    announcement: Pažiūrėkite  mūsų pranešimai
+    authored_article: Pažiūrėkite  mūsų autorių straipsniai
+    case_study: Pažiūrėkite  mūsų atvejų analizės
+    closed_consultation: Pažiūrėkite  mūsų pasibaigusios konsultacijos
+    consultation: Pažiūrėkite  mūsų konsultacijos
+    consultation_outcome: Pažiūrėkite  mūsų konsultacijos rezultatai
+    corporate_report: Pažiūrėkite  mūsų bendros ataskaitos
+    correspondence: Pažiūrėkite  mūsų korespondencija
+    decision:
+    detailed_guidance: Pažiūrėkite  mūsų detalesnė informacija
+    document_collection:
+    draft_text: Pažiūrėkite  mūsų pirminiai teksto variantai
+    fatality_notice: Pažiūrėkite  mūsų pranešimas apie nelaimes
+    foi_release: 'Pažiūrėkite  mūsų informacijos laisvė: pranešimai'
+    form: Pažiūrėkite  mūsų formos
+    government_response: Pažiūrėkite  mūsų vyriausybės atsakai
+    guidance: Pažiūrėkite  mūsų informacija
+    impact_assessment: Pažiūrėkite  mūsų poveikio įvertinimai
+    imported: Pažiūrėkite  mūsų patalpinta - laukiama publikavimo
+    international_treaty:
+    map: Pažiūrėkite  mūsų Žemėlapiai
+    national_statistics: 'Pažiūrėkite  mūsų statistika - nacionalinė statistika '
+    news_article: Pažiūrėkite  mūsų straipsniai
+    news_story: Pažiūrėkite  mūsų naujienos
+    notice:
+    open_consultation: 'Pažiūrėkite  mūsų atviros konsultacijos '
+    oral_statement: Pažiūrėkite  mūsų Žodiniai kreipimaisi į parlamentą
+    policy: Pažiūrėkite  mūsų strategija
+    policy_paper: Pažiūrėkite  mūsų strategijų dokumentai
+    press_release: Pažiūrėkite  mūsų pranešimai spaudai
+    promotional: Pažiūrėkite  mūsų reklaminė medžiaga
+    publication: Pažiūrėkite  mūsų leidiniai
+    regulation:
+    research: Pažiūrėkite  mūsų tyrimai ir analizės
+    speaking_notes: Pažiūrėkite  mūsų kalbos santrauka
+    speech: Pažiūrėkite  mūsų kalbos
+    statement_to_parliament: Pažiūrėkite  mūsų kreipimaisi į parlamentą
+    statistical_data_set: Pažiūrėkite  mūsų statistiniai duomenys
+    statistics: Pažiūrėkite  mūsų statistika
+    statutory_guidance:
+    transcript: Pažiūrėkite  mūsų kalbų tekstai
+    transparency: Pažiūrėkite  mūsų skaidrumo informacija
+    worldwide_priority: Pažiūrėkite  mūsų pasauliniai prioritetai
+    written_statement: Pažiūrėkite  mūsų rašytiniai kreipimaisi į parlamentą
+  social_media:
+    follow_us:
+  support:
+    array:
+      last_word_connector: ir
+  time:
+    formats:
+      long_ordinal: "%Y %B %e %H:%M"
+  worldwide_organisation:
+    corporate_information:
+      about_our_services_html:
+      personal_information_charter_html: "Čia %{link} rasite paaiškinimą, kaip tvarkoma
+        Jūsų asmeninė informacija"
+      publication_scheme_html: Sužinokite, kokią informaciją mes pastoviai pateikiame
+        puslapyje %{link}.
+      social_media_use_html: Perskaitykite mūsų strategiją %{link}.
+      welsh_language_scheme_html: Sužinokite apie mūsų įsipareigojimą skelbti %{link}.
+    find_out_more: Visa informacija apie mus ir  kontaktai
+    headings:
+      about_us: Apie mus
+      contact_us: Parašykite mums
+      corporate_information: Korporatyvinė informacija
+      follow_us: Sekite mus
+      our_people: Mūsų darbuotojai
+      our_services: Mūsų paslaugos
+    location: Vieta
+    part_of: Dalis

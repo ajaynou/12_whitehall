@@ -1,0 +1,66 @@
+function url_matcher(path_fragment) {
+  return function() { return window.location.toString().search(path_fragment) >= 0 }
+};
+function all_matcher() {
+  return true;
+};
+
+function id_from_url() {
+  return window.location.toString().split('/').pop();
+};
+function id_from_doc_page() {
+  return $('.document-page, [id^=detailed_guide_]').attr('id').split('_').pop();
+};
+function id_from_doc_collection() {
+  return $('.document_collection, .documentcollection').attr('id').split('_').pop();
+};
+
+function path_builder(path_fragment) {
+  return function(id) { return path_fragment + id; };
+};
+
+var mappings = [
+  {
+    matcher: url_matcher("announcements/"),
+    path_builder: path_builder("statistics_announcements/"),
+    id_finder: id_from_url
+  },
+  {
+    matcher: url_matcher("collections/"),
+    path_builder: path_builder("collections/"),
+    id_finder: id_from_doc_collection
+  },
+  {
+    matcher: url_matcher("organisations/"),
+    path_builder: path_builder("organisations/"),
+    id_finder: id_from_url
+  },
+  {
+    matcher: url_matcher("topics/"),
+    path_builder: path_builder("topics/"),
+    id_finder: id_from_url
+  },
+  {
+    matcher: url_matcher("world/"),
+    path_builder: path_builder("world_locations/"),
+    id_finder: id_from_url
+  },
+  {
+    matcher: all_matcher,
+    path_builder: path_builder("editions/"),
+    id_finder: id_from_doc_page
+  }
+];
+
+function get_mapping() {
+  for(var i=0; i<mappings.length; i++) {
+    if (mappings[i].matcher()) return mappings[i];
+  }
+}
+
+function nav_to_backend() {
+  var mapping = get_mapping();
+  if (mapping) window.location = "<%= Whitehall.admin_root + Whitehall.router_prefix %>/admin/" + mapping.path_builder(mapping.id_finder());
+}
+
+nav_to_backend();

@@ -1,0 +1,28 @@
+<% initialise_script "GOVUK.AdminSpeechesForm", el: '.js-edition-form', speech_type_label_data: speech_type_label_data %>
+
+<div class="format-advice">
+  <p><strong>Use this format for:</strong> Public speeches by ministers or other named spokespeople, ministerial statements to Parliament and bylined articles.</p>
+  <p>Do <em>not</em> use for: statements <em>not</em> made to Parliament (use the “news article” format for those).</p>
+</div>
+
+<%= edition_editing_tabs(edition) do %>
+  <%= standard_edition_form(edition) do |form| %>
+    <fieldset>
+      <legend>Associations</legend>
+
+      <div class="important-associations">
+        <%= render 'admin/shared/policy_fields', form: form %>
+        <%= render 'topic_fields', form: form, edition: edition %>
+      </div>
+
+      <%= render 'topical_event_fields', form: form, edition: edition %>
+      <%= render 'world_location_fields', form: form, edition: edition %>
+      <%= render 'organisation_fields', form: form, edition: edition %>
+      <% if edition.imported? %>
+        <p>This document contains temporary organisation associations to allow for import. These fields will be overwritten once the deliverer of the speech is chosen.</p>
+        <hr>
+      <% end %>
+      <%= render 'specialist_sector_fields', form: form, edition: edition %>
+    </fieldset>
+  <% end %>
+<% end %>

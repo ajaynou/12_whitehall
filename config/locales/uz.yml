@@ -1,0 +1,455 @@
+uz:
+  document:
+    headings:
+      attachments:
+        one: Hujjat
+        other: Hujjatlar
+      applies_to_nations: 'Tegishli '
+      field_of_operation: Faoliyat sohasi
+      from:
+      location:
+      part_of:
+    type:
+      announcement:
+        one: E'lon
+        other: E'lonlar
+      authored_article:
+        one: Muallif maqolasi
+        other: Muallif maqolalari
+      case_study:
+        one: Holat o'rganilishi
+        other: Holat o'rganilishlari
+      closed_consultation:
+        one: Yopiq fikr almashish
+        other: Yopiq fikr almashishlar
+      consultation:
+        one: Fikr almashish
+        other: Fikr almashishlar
+      consultation_outcome:
+        one: Fikr almashish natijasi
+        other: Fikr almashish natijalari
+      corporate_report:
+        one: Korporativ hisobot
+        other: Korporativ hisobotlar
+      correspondence:
+        one: Muvofiqlik
+        other: Muvofiqliklar
+      decision:
+        one:
+        other:
+      detailed_guidance:
+        one: Batafsil ko'mak
+        other: Batafsil ko'mak
+      document_collection:
+        one: Bir talay
+        other:
+      draft_text:
+        one: Matn loyihasi
+        other: Matn loyihalari
+      fatality_notice:
+        one: Falokat haqida e'lon
+        other: Falokat haqida e'lonlar
+      foi_release:
+        one: So'z erkinligiga bag'ishlangan nashr
+        other: So'z erkinligiga bag'ishlangan nashrlar
+      form:
+        one: Anketa
+        other: Anketalar
+      government_response:
+        one: Hukumat javobi
+        other: Hukumat javoblari
+      guidance:
+        one: Rahbarlik
+        other: Rahbarlik
+      impact_assessment:
+        one: Ta'sir etuvchi omillar tahlili
+        other: Ta'sir etuvchi omillar tahlillari
+      imported:
+        one: 'yuklandi - kutilmoqda '
+        other: 'yuklandi - kutilmoqda '
+      independent_report:
+        one: Mustaqil hisobot
+        other: Mustaqil hisobotlar
+      international_treaty:
+        one:
+        other:
+      map:
+        one: Xarita
+        other: Xaritalar
+      national_statistics:
+        one: Statistika - milliy statistika
+        other: Statistika - milliy statistika
+      news_article:
+        one: Yangi maqola
+        other: Yangi maqolalar
+      news_story:
+        one: Yangilik
+        other: Yangiliklar
+      notice:
+        one:
+        other:
+      open_consultation:
+        one: Ochiq fikr almashish
+        other: Ochiq fikr almashishlar
+      oral_statement:
+        one: Parlament uchun og'zaki bayonot
+        other: Parlament uchun og'zaki bayonotlar
+      policy_paper:
+        one: Dasturga oid hujjat
+        other: Dasturga oid hujjatlar
+      press_release:
+        one: Press reliz
+        other: Press relizlar
+      promotional:
+        one: Reklama uchun manbalar
+        other: Reklama uchun manbalar
+      publication:
+        one: Nashr
+        other: Nashrlar
+      regulation:
+        one:
+        other:
+      research:
+        one: Tadqiqot va tahlilllar
+        other: Tadqiqot va tahlilllar
+      speaking_notes:
+        one: Nutq qaydlari
+        other: Nutq qaydlari
+      speech:
+        one: Nutq
+        other: Nutqlar
+      statement_to_parliament:
+        one: Parlament uchun hisobot
+        other: Parlament uchun hisobotlar
+      statistical_data_set:
+        one: Statistika ma'lumot to'plami
+        other: Statistika ma'lumot to'plamlari
+      official_statistics:
+        one: Statistika
+        other: Statistika
+      statutory_guidance:
+        one:
+        other:
+      transcript:
+        one: Matn
+        other: Matnlar
+      transparency:
+        one: Ochiqlikka oid ma'lumotlar
+        other: Ochiqlikka oid ma'lumotlar
+      worldwide_priority:
+        one: Dunyoviy prioritet
+        other: Dunyoviy prioritetlar
+      written_statement:
+        one: Parlament uchun yozma hisobot
+        other: Parlament uchun yozma hisobotlar
+    contents:
+    footer_meta:
+      full_page_history:
+      page_history:
+      published:
+      updated:
+    published: nashr qilindi
+    read: Maqolani o'qish %{title}
+    speech:
+      author_title:
+        minister: Vazir
+        speaker: Muallif
+      delivered_on: 'Yetkazildi:'
+      delivery_title:
+        minister: Vazir
+        speaker: Spiker
+      written_on: 'Yozildi:'
+    updated: yangilandi
+    view: Nazorat '%{title}'
+  people:
+    heading:
+      one:
+      other:
+    biography:
+    previous_roles:
+    previous_roles_in_government:
+    read_more:
+  roles:
+    heading:
+      one:
+      other:
+    headings:
+      current_holder:
+      previous_holders:
+      responsibilities:
+    ministerial:
+    policies_responsible_with_person:
+    previous_holders:
+    read_more:
+  world_location:
+    type:
+      international_delegation:
+        one: Xalqaro delegatsiya
+        other: Xalqaro delegatsiyalar
+      world_location:
+        one: Hududiy joylashuv
+        other: Hududiy joylashuvlar
+    headings:
+      announcements: Bizning e'lonlar
+      country: Mamlakat
+      documents: Hujjatlar
+      mission: Bizning vazifalar
+      organisations: Tashkilotlar
+      priorities: Prioritetlar
+      publications: Bizning nashrlar
+      quick_links: Tez bog'lanish linklari
+      related_policies: Oid dasturlar
+      statistics: Bizning statistika
+  activerecord:
+    attributes:
+      attachment:
+        hoc_paper_number:
+        isbn:
+        unnumbered_hoc_paper:
+      attachment_data:
+        file:
+      corporate_information_page/corporate_information_page_attachments/attachment:
+        command_paper_number:
+        hoc_paper_number:
+        isbn:
+        order_url:
+        price:
+        title:
+        unique_reference:
+        unnumbered_hoc_paper:
+      corporate_information_page/corporate_information_page_attachments/attachment/attachment_data:
+        file:
+      policy_group/policy_group_attachments/attachment/attachment_data:
+        file:
+      response/consultation_response_attachments/attachment:
+        command_paper_number:
+        hoc_paper_number:
+        isbn:
+        order_url:
+        price:
+        title:
+        unique_reference:
+        unnumbered_hoc_paper:
+      response/consultation_response_attachments/attachment/attachment_data:
+        file:
+    nested_attachment_data_field_names:
+      file:
+    nested_attachment_field_names:
+      command_paper_number:
+      hoc_paper_number:
+      isbn:
+      order_url:
+      price:
+      title:
+      unique_reference:
+      unnumbered_hoc_paper:
+  announcements:
+    heading: E'lonlar
+    view_all:
+  attachment:
+    accessibility:
+      full_help_html: Bu hujjatni brayl,audio yoki boshqa formatda olish uchun quyidagi
+        elektron manzilga %{email} jismoniy manzilingiz, telefon raqamingiz va nashr
+        sarlavhasinini ("%{title}")%{references} kiritib xabar yuboring.
+      heading: Bu hujjat boshqa formatlarda mavjud emas.
+      request_a_different_format: Boshqa formatdagi hujjatni so'rash.
+    headings:
+      order_a_copy: Nusxa buyurtirish
+      order_a_copy_full: Nashrning nusxasini buyurtirish
+      published: Nashr qilindi
+      reference: Ishora
+      unnumbered_command_paper:
+      unnumbered_hoc_paper:
+    opendocument:
+      help_html:
+    see_more:
+  change_notes:
+    page_history:
+    published_at:
+    see_all_updates:
+    updated_at:
+  contact:
+    contact_form: Aloqa uchun
+    email: Elektron manzil
+  corporate_information_page:
+    type:
+      about:
+      about_our_services:
+      access_and_opening:
+      complaints_procedure:
+      equality_and_diversity:
+      media_enquiries:
+      membership:
+      our_energy_use:
+      our_governance:
+      personal_information_charter: Shaxsiy ma'lumot nizomi
+      petitions_and_campaigns:
+      procurement:
+      publication_scheme: Nashr rejasi
+      recruitment:
+      research:
+      social_media_use: Jamoat media vositalarini qullanilishi
+      staff_update:
+      statistics:
+      terms_of_reference:
+      welsh_language_scheme: Uels tili rejasi
+  date:
+    formats:
+      default: "%e %B %Y"
+      long_ordinal: "%e %B %Y"
+  detailed_guidance:
+    back_to_contents:
+    contents:
+    more:
+    part_of_published_collection:
+    published_related_detailed_guides:
+    related_mainstream_content:
+    see_more_like_this:
+  document_filters:
+    description: Sizni&nbsp; qiziqtirgan natijalarni ko'rish&nbsp; uchun filtrlarni
+      qullaning
+    no_results:
+      description: Qidiruvni kengaytiring va yana bir bora urinib ko'ring.
+      title: Mos hujjatlar yoq.
+      tna_heading:
+      tna_link:
+    world_locations:
+      all: Hamma joylashuvlar
+      label: Hududiy joylashuvlar
+  feeds:
+    email:
+    feed:
+    get_updates_to_this_list:
+    latest_activity: Eng so'nggi faoliyat
+  i18n:
+    direction: ltr
+  language_names:
+    uz: O'zbekcha
+  latest_feed:
+    no_updates: Yangiliklar yoq.
+    title: 'Eng so''nggi '
+  national_statistics:
+    heading:
+  number:
+    human:
+      storage_units:
+        format: "%n%u"
+  organisation:
+    about:
+      read_more: Bizning faoliyatimiz haqida ko'proq ma'lumot oling
+    corporate_information:
+      access_our_info: Biz haqimizda ma'lumotga ega bo'ling
+      foi_how_to: So'z erkinligiga oid so'rovni jo'natish
+      foi_releases: So'z erkinligiga oid nashrlar
+      jobs_and_contacts: Ish va shartnomalar
+      organisation_chart:
+      transparency: Ochiqlikka oid ma'lumotlar
+    foi_exemption_html:
+    headings:
+      chief_professional_officers: Bizning asosiy mutaxassislar
+      contact: "%{name} bog'laning"
+      corporate_information: Korporativ ma'lumot
+      corporate_reports: Korporativ hisobotlar
+      documents:
+      freedom_of_information_act:
+      making_foi_requests:
+      our_announcements: Bizning e'lonlar
+      our_consultations:
+      our_judges:
+      our_management: Bizning rahbariyat
+      our_ministers: Bizning vazirlar
+      our_policies: Bizning dasturlar
+      our_publications: Bizning nashrlar
+      our_senior_military_officials: Bizning yuqori darajadagi harbiy vakillarimiz
+      our_services: Bizning xizmatlat
+      our_statistics: Bizning statistika
+      our_topics: Bu yonalishlar bo'yicha ishlaymiz
+      special_representatives: Maxsus vakil
+      traffic_commissioners: Traffik va transport savollari bo'yicha komissar 
+      what_we_do: Bizning faoliyatimiz
+      who_we_are:
+    making_foi_requests:
+      step1_html:
+      step2_html:
+      step3_html:
+  policies:
+    heading: Dasturlar
+    view_all:
+  publications:
+    heading: Nashrlar
+    headings:
+      detail: Tafsilot
+  read_more: Ko'proq ma'lumotga ega bo'ling
+  see_all:
+    announcement: Bizning butun e'lonlar ko'ring
+    authored_article: Bizning butun muallif maqolalari ko'ring
+    case_study: Bizning butun holat o'rganilishlari ko'ring
+    closed_consultation: Bizning butun yopiq fikr almashishlar ko'ring
+    consultation: Bizning butun fikr almashishlar ko'ring
+    consultation_outcome: Bizning butun fikr almashish natijalari ko'ring
+    corporate_report: Bizning butun korporativ hisobotlar ko'ring
+    correspondence: Bizning butun muvofiqliklar ko'ring
+    decision:
+    detailed_guidance: Bizning butun batafsil ko'mak ko'ring
+    document_collection:
+    draft_text: Bizning butun matn loyihalari ko'ring
+    fatality_notice: Bizning butun falokat haqida e'lonlar ko'ring
+    foi_release: Bizning butun so'z erkinligiga bag'ishlangan nashrlar ko'ring
+    form: Bizning butun anketalar ko'ring
+    government_response: Bizning butun hukumat javoblari ko'ring
+    guidance: Bizning butun rahbarlik ko'ring
+    impact_assessment: Bizning butun ta'sir etuvchi omillar tahlillari ko'ring
+    imported: Bizning butun yuklandi - kutilmoqda  ko'ring
+    international_treaty:
+    map: Bizning butun xaritalar ko'ring
+    national_statistics: Bizning butun statistika - milliy statistika ko'ring
+    news_article: Bizning butun yangi maqolalar ko'ring
+    news_story: Bizning butun yangiliklar ko'ring
+    notice:
+    open_consultation: Bizning butun ochiq fikr almashishlar ko'ring
+    oral_statement: Bizning butun parlament uchun og'zaki bayonotlar ko'ring
+    policy: Bizning butun dasturlar ko'ring
+    policy_paper: Bizning butun dasturga oid hujjatlar ko'ring
+    press_release: Bizning butun press relizlar ko'ring
+    promotional: Bizning butun reklama uchun manbalar ko'ring
+    publication: Bizning butun nashrlar ko'ring
+    regulation:
+    research: Bizning butun tadqiqot va tahlilllar ko'ring
+    speaking_notes: Bizning butun nutq qaydlari ko'ring
+    speech: Bizning butun nutqlar ko'ring
+    statement_to_parliament: Bizning butun parlament uchun hisobotlar ko'ring
+    statistical_data_set: Bizning butun statistika ma'lumot to'plamlari ko'ring
+    statistics: Bizning butun statistika ko'ring
+    statutory_guidance:
+    transcript: Bizning butun matnlar ko'ring
+    transparency: Bizning butun ochiqlikka oid ma'lumotlar ko'ring
+    worldwide_priority: Bizning butun dunyoviy prioritetlar ko'ring
+    written_statement: Bizning butun parlament uchun yozma hisobotlar ko'ring
+  social_media:
+    follow_us:
+  support:
+    array:
+      last_word_connector: va
+  time:
+    formats:
+      long_ordinal: "%e %B %Y %H:%M"
+  worldwide_organisation:
+    corporate_information:
+      about_our_services_html:
+      personal_information_charter_html: Bizning %{link} qanday qilib shaxsiy ma'lumot
+        bilan ishlashimiz haqida sizga ma'lumot beradi 
+      publication_scheme_html: "%{link} Biz doimiy tarzda nashr etayotgan ma'lumot
+        haqida o'qing"
+      social_media_use_html: "%{link} Bizning dasturimiz haqida batafsil ma'lumot"
+      welsh_language_scheme_html: "%{link} Nashr etish uchun biz olib borayotgan faoliyatimiz
+        haqida o'qing"
+    find_out_more: To'liq profil va bog'lanish uchun ma'lumotni ko'ring
+    headings:
+      about_us: Biz haqimizda
+      contact_us: Biz bilan bog'laning
+      corporate_information: Korporativ ma'lumot
+      follow_us: Bizni qayd eting
+      our_people: Bizning odamlar
+      our_services: Bizning xizmatlar
+    location: Joylashuv
+    part_of: Qismi

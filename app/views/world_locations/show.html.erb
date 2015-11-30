@@ -1,0 +1,105 @@
+<% page_title @world_location.title, "UK and the world" %>
+<% page_class "world-locations-show" %>
+<% atom_discovery_link_tag atom_feed_url_for(@world_location), t("feeds.latest_activity") %>
+
+<% if world_location_survey_url(@world_location) %>
+  <% initialise_script('GOVUK.CustomUserSatisfactionSurvey', surveyUrl: world_location_survey_url(@world_location)) %>
+<% end %>
+
+<%= content_tag_for(:article, @world_location) do %>
+  <header class="block headings-block">
+    <div class="inner-block floated-children">
+      <%= render partial: 'shared/heading',
+                locals: { type: t_world_location(@world_location),
+                          heading: @world_location.title,
+                          extra: true, big: true } %>
+      <aside class="heading-extra">
+        <div class="inner-heading">
+          <%= render 'shared/available_languages', object: @world_location %>
+          <%= render 'shared/featured_links', links: @world_location.featured_links.only_the_initial_set %>
+        </div>
+      </aside>
+    </div>
+  </header>
+
+  <div class="block news-block">
+    <div class="inner-block">
+      <section class="featured-news items-<%= @feature_list.current_feature_count %>" id="featured-documents">
+        <% if @feature_list.any_current_features? %>
+          <%= render partial: 'shared/featured',
+                     collection: @feature_list.current_featured,
+                     as: :feature,
+                     locals: { show_meta: true,
+                               extra_class: "secondary" } %>
+        <% end %>
+
+        <%= render partial: 'shared/recently_updated',
+                  locals: { recently_updated: @recently_updated,
+                            atom_url: atom_feed_url_for(@world_location),
+                            extra_class: 'panel',
+                            see_all_link: latest_path(world_locations: [@world_location])} %>
+      </section>
+    </div>
+  </div>
+
+  <div class="block our-mission">
+    <div class="inner-block">
+      <section class="article-section">
+        <h1 class="keyline-header"><%= t('world_location.headings.mission') %></h1>
+        <p>
+          <span class="mission_statement"><%= govspeak_to_html(@world_location.mission_statement) %></span>
+        </p>
+      </section>
+    </div>
+  </div>
+
+  <% if (@non_statistics_publications + @announcements + @statistics_publications).any? %>
+    <div class="block documents-grid">
+      <div class="inner-block">
+        <h1 class="block-title"><%= t('world_location.headings.documents') %></h1>
+        <% if @announcements.any? %>
+          <section id="announcements" class="document-block documents-<%= document_block_counter %>">
+            <h1><%= t('world_location.headings.announcements') %></h1>
+            <div class="content">
+              <%= render partial: "shared/list_description", locals: { editions: @announcements } %>
+              <p class="see-all">
+                <%= link_to t_see_all_our(:announcement), announcements_filter_path(@world_location, include_world_location_news: '1') %>
+              </p>
+            </div>
+          </section>
+        <% end %>
+        <% if @non_statistics_publications.any? %>
+          <section id="publications" class="document-block documents-<%= document_block_counter %>">
+            <h1><%= t('world_location.headings.publications') %></h1>
+            <div class="content">
+              <%= render partial: "shared/list_description", locals: { editions: @non_statistics_publications } %>
+              <p class="see-all">
+                <%= link_to t_see_all_our(:publication), publications_filter_path(@world_location) %>
+              </p>
+            </div>
+          </section>
+        <% end %>
+        <% if @statistics_publications.any? %>
+          <section id="statistics-publications" class="document-block documents-<%= document_block_counter %>">
+            <h1><%= t('world_location.headings.statistics') %></h1>
+            <div class="content">
+              <%= render partial: "shared/list_description", locals: { editions: @statistics_publications } %>
+              <p class="see-all">
+                <%= link_to t_see_all_our(:statistics), publications_filter_path(@world_location, publication_filter_option: 'statistics') %>
+              </p>
+            </div>
+          </section>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+
+  <div class="block world-organisations">
+    <div class="inner-block">
+      <section id="organisations" class="world-organisations-block">
+        <h1 class="keyline-header"><%= t('world_location.headings.organisations') %></h1>
+        <%= render partial: 'worldwide_organisations/worldwide_organisation', collection: @worldwide_organisations %>
+      </section>
+    </div>
+  </div>
+<% end %>

@@ -1,0 +1,27 @@
+<% page_title "Fields of operation" %>
+<% page_class "fields-of-operation-index" %>
+
+<header class="block headings-block">
+  <div class="inner-block floated-children">
+    <%= render partial: 'shared/heading',
+              locals: { type: 'British fatalities',
+                        heading: "Fields of operation",
+                        big: true } %>
+  </div>
+</header>
+
+<div class="block-2">
+  <div class="inner-block">
+    <section class="simple-alphabetical-list fields-of-operation">
+      <div class="alphabetical-row">
+        <ul>
+          <% @operational_fields.each do |field| %>
+            <%= content_tag_for :li, field do %>
+              <%= link_to field.name, operational_field_path(field) %>
+            <% end %>
+          <% end %>
+        </ul>
+      </div>
+    </section>
+  </div>
+</div>

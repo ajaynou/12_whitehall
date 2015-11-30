@@ -1,0 +1,2 @@
+class SpecialRepresentativeRole < Role
+end

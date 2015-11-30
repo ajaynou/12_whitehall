@@ -1,0 +1,455 @@
+tr:
+  activerecord:
+    attributes:
+      attachment:
+        hoc_paper_number:
+        isbn:
+        unnumbered_hoc_paper:
+      attachment_data:
+        file:
+      corporate_information_page/corporate_information_page_attachments/attachment:
+        command_paper_number:
+        hoc_paper_number:
+        isbn:
+        order_url:
+        price:
+        title:
+        unique_reference:
+        unnumbered_hoc_paper:
+      corporate_information_page/corporate_information_page_attachments/attachment/attachment_data:
+        file:
+      policy_group/policy_group_attachments/attachment/attachment_data:
+        file:
+      response/consultation_response_attachments/attachment:
+        command_paper_number:
+        hoc_paper_number:
+        isbn:
+        order_url:
+        price:
+        title:
+        unique_reference:
+        unnumbered_hoc_paper:
+      response/consultation_response_attachments/attachment/attachment_data:
+        file:
+    nested_attachment_data_field_names:
+      file:
+    nested_attachment_field_names:
+      command_paper_number:
+      hoc_paper_number:
+      isbn:
+      order_url:
+      price:
+      title:
+      unique_reference:
+      unnumbered_hoc_paper:
+  announcements:
+    heading: Duyurular
+    view_all:
+  attachment:
+    accessibility:
+      full_help_html: |-
+        Bu dosyaya farklı formatta erişim için lütfen bize adresiniz, telefon numaranız ve yayının adı ("%{title}")%{references}.
+         ile birlikte e-posta %{email} yoluyla ulaşın
+      heading: Bu dosya yardımcı teknoloji kullananlar için uygun olmayabilir
+      request_a_different_format: Dosyaya farklı formatta erişim için
+    headings:
+      order_a_copy: Bir kopyasını sipariş edin
+      order_a_copy_full: Yayının bir kopyasını sipariş edin
+      published: Yayında
+      reference: Ref
+      unnumbered_command_paper:
+      unnumbered_hoc_paper:
+    opendocument:
+      help_html:
+    see_more:
+  change_notes:
+    page_history:
+    published_at:
+    see_all_updates:
+    updated_at:
+  contact:
+    contact_form: "İletişim Formu"
+    email: E-posta
+  corporate_information_page:
+    type:
+      about:
+      about_our_services:
+      access_and_opening:
+      complaints_procedure:
+      equality_and_diversity:
+      media_enquiries:
+      membership:
+      our_energy_use:
+      our_governance:
+      personal_information_charter: Kişisel Bilgiler Tüzüğü
+      petitions_and_campaigns:
+      procurement:
+      publication_scheme: Yayın Programı
+      recruitment:
+      research:
+      social_media_use: 'Sosyal Medya Kullanımı '
+      staff_update:
+      statistics:
+      terms_of_reference:
+      welsh_language_scheme: Galler dili Programı
+  date:
+    formats:
+      default: "%d %B %Y"
+      long_ordinal: "%e %B %Y"
+  detailed_guidance:
+    back_to_contents:
+    contents:
+    more:
+    part_of_published_collection:
+    published_related_detailed_guides:
+    related_mainstream_content:
+    see_more_like_this:
+  document:
+    contents:
+    footer_meta:
+      full_page_history:
+      page_history:
+      published:
+      updated:
+    headings:
+      applies_to_nations: Uygulandığı Alanlar
+      attachments:
+        one: Belge
+        other: Belgeler
+      field_of_operation: Faaliyet Alanı
+      from:
+      location:
+      part_of:
+    published: Yayında
+    read: "%{title} makalesini okuyunuz"
+    speech:
+      author_title:
+        minister: Bakan
+        speaker: Yazar
+      delivered_on: Teslim tarihi
+      delivery_title:
+        minister: Bakan
+        speaker: Konuşmacı
+      written_on: Yazıldı
+    type:
+      announcement:
+        one: Duyuru
+        other: Duyurular
+      authored_article:
+        one: Yazılan makale
+        other: Yazılan makaleler
+      case_study:
+        one: "Örnek Olay"
+        other: "Örnek Olaylar"
+      closed_consultation:
+        one: Sona eren çalışmalar
+        other: Sona eren çalışmalar
+      consultation:
+        one: Danışma
+        other: Yapılan Danışmalar
+      consultation_outcome:
+        one: Danışma sonucu
+        other: Danışma sonuçları
+      corporate_report:
+        one: Kurumsal Rapor
+        other: Kurumsal Raporlar
+      correspondence:
+        one: Yazışma
+        other: Yazışmalar
+      decision:
+        one:
+        other:
+      detailed_guidance:
+        one: Ayrıntılı Kılavuz
+        other: Ayrıntılı Kılavuzlar
+      document_collection:
+        one: Seriler
+        other:
+      draft_text:
+        one: Taslak metin
+        other: Taslak metinler
+      fatality_notice:
+        one: "Ölüm ilanı"
+        other: "Ölüm ilanları"
+      foi_release:
+        one: Bilgi edinme hakkı raporu
+        other: Bilgi edinme hakkı raporları
+      form:
+        one: Form
+        other: Formlar
+      government_response:
+        one: Hükümet cevabı
+        other: Hükümet cevapları
+      guidance:
+        one: Kılavuz
+        other: Kılavuzlar
+      impact_assessment:
+        one: Etki değerlendirmesi
+        other: Etki değerlendirmeleri
+      imported:
+        one: Alındı - Kategorize edilecek
+        other: Alındı - Kategorize edilecek
+      independent_report:
+        one: Bağımsız rapor
+        other: Bağımsız raporlar
+      international_treaty:
+        one:
+        other:
+      map:
+        one: Harita
+        other: Haritalar
+      national_statistics:
+        one: "İstatistikler - ulusal istatistikler"
+        other: "İstatistikler - ulusal istatistikler"
+      news_article:
+        one: Makale
+        other: Makaleler
+      news_story:
+        one: Haber
+        other: Haberler
+      notice:
+        one:
+        other:
+      open_consultation:
+        one: Devam eden çalışma
+        other: Devam eden çalışmalar
+      oral_statement:
+        one: Parlamento'ya sözlü açıklama
+        other: Parlamento'ya sözlü açıklamalar
+      policy_paper:
+        one: Politika belgesi
+        other: Politika belgeleri
+      press_release:
+        one: Basın Bülteni
+        other: Basın Bültenleri
+      promotional:
+        one: Tanıtım Malzemesi
+        other: Tanıtım Malzemeleri
+      publication:
+        one: Yayın
+        other: Yayınlar
+      regulation:
+        one:
+        other:
+      research:
+        one: Araştırma ve analiz
+        other: Araştırma ve analizler
+      speaking_notes:
+        one: Konuşma notu
+        other: Konuşma notları
+      speech:
+        one: Konuşma
+        other: Konuşmalar
+      statement_to_parliament:
+        one: Parlamento'ya yapılan açıklama
+        other: Parlamento'ya yapılan açıklamalar
+      statistical_data_set:
+        one: "İstatiksel veri setleri"
+        other: "İstatiksel veri setleri"
+      official_statistics:
+        one: "İstatistikler"
+        other: "İstatistikler"
+      statutory_guidance:
+        one:
+        other:
+      transcript:
+        one: Transkriptler
+        other: Transkriptler
+      transparency:
+        one: Veri saydamlığı
+        other: Veri saydamlığı
+      worldwide_priority:
+        one: "Öncelik"
+        other: "Öncelikler"
+      written_statement:
+        one: Parlamento'ya yapılan yazılı açıklama
+        other: Parlamento'ya yapılan yazılı açıklamalar
+    updated: Güncellendi
+    view: Görüntüle '%{title}'
+  document_filters:
+    description: Filtre seçeneğini kullanarak aradığınız sonuca daha kolay ulaşabilirsiniz
+    no_results:
+      description: Aramanızı genişleterek tekrar deneyiniz
+      title: Eşleşen sonuç yok
+      tna_heading:
+      tna_link:
+    world_locations:
+      all: Tüm yerler
+      label: "Ülkeler"
+  feeds:
+    email:
+    feed:
+    get_updates_to_this_list:
+    latest_activity: Son etkinlik
+  i18n:
+    direction: Itr
+  language_names:
+    tr: Türkçe
+  latest_feed:
+    no_updates: Henüz güncelleme yok
+    title: En son haberler
+  national_statistics:
+    heading:
+  number:
+    human:
+      storage_units:
+        format: "%n%u"
+  organisation:
+    about:
+      read_more: Hakkımızda daha fazla bilgi için
+    corporate_information:
+      access_our_info: Bilgilere erişim
+      foi_how_to: Bilgi Edinme Hakkı nasıl kullanılır
+      foi_releases: Bilgi Edinme Hakkı Raporu
+      jobs_and_contacts: "İş ve sözleşmeler"
+      organisation_chart:
+      transparency: Veri saydamlığı
+    foi_exemption_html:
+    headings:
+      chief_professional_officers: "Üst düzey uzman "
+      contact: "İletişim %{name}"
+      corporate_information: Kurumsal bilgi
+      corporate_reports: Kurumsal raporlar
+      documents:
+      freedom_of_information_act:
+      making_foi_requests:
+      our_announcements: 'Duyurular '
+      our_consultations:
+      our_judges:
+      our_management: Yönetim
+      our_ministers: Bakanlarımız
+      our_policies: Politikalarımız
+      our_publications: Yayınlarımız
+      our_senior_military_officials: Kıdemli askeri görevli
+      our_services: Hizmetlerimiz
+      our_statistics: "İstatistikler"
+      our_topics: Bu konular üzerine çalışıyoruz
+      special_representatives: "Özel temsilciler"
+      traffic_commissioners: Trafik Şube Müdürü
+      what_we_do: 'Hakkımızda '
+      who_we_are:
+    making_foi_requests:
+      step1_html:
+      step2_html:
+      step3_html:
+  people:
+    biography:
+    heading:
+      one:
+      other:
+    previous_roles:
+    previous_roles_in_government:
+    read_more:
+  policies:
+    heading: Politikalar
+    view_all:
+  publications:
+    heading: Yayınlar
+    headings:
+      detail: Detay
+  read_more: Daha fazlası için
+  roles:
+    heading:
+      one:
+      other:
+    headings:
+      current_holder:
+      previous_holders:
+      responsibilities:
+    ministerial:
+    policies_responsible_with_person:
+    previous_holders:
+    read_more:
+  see_all:
+    announcement: Tamamını görüntüle
+    authored_article: Tamamını görüntüle
+    case_study: Tamamını görüntüle
+    closed_consultation: Tamamını görüntüle
+    consultation: Tamamını görüntüle
+    consultation_outcome: Tamamını görüntüle
+    corporate_report: Tamamını görüntüle
+    correspondence: Tamamını görüntüle
+    decision:
+    detailed_guidance: Tamamını görüntüle
+    document_collection:
+    draft_text: Tamamını görüntüle
+    fatality_notice: Tamamını görüntüle
+    foi_release: Tamamını görüntüle
+    form: Tamamını görüntüle
+    government_response: Tamamını görüntüle
+    guidance: Tamamını görüntüle
+    impact_assessment: Tamamını görüntüle
+    imported: Tamamını görüntüle
+    international_treaty:
+    map: Tamamını görüntüle
+    national_statistics: Tamamını görüntüle
+    news_article: Tamamını görüntüle
+    news_story: Tamamını görüntüle
+    notice:
+    open_consultation: Tamamını görüntüle
+    oral_statement: Tamamını görüntüle
+    policy: Tamamını görüntüle
+    policy_paper: Tamamını görüntüle
+    press_release: Tamamını görüntüle
+    promotional: Tamamını görüntüle
+    publication: Tamamını görüntüle
+    regulation:
+    research: Tamamını görüntüle
+    speaking_notes: Tamamını görüntüle
+    speech: Tamamını görüntüle
+    statement_to_parliament: Tamamını görüntüle
+    statistical_data_set: Tamamını görüntüle
+    statistics: Tamamını görüntüle
+    statutory_guidance:
+    transcript: Tamamını görüntüle
+    transparency: Tamamını görüntüle
+    worldwide_priority: Tamamını görüntüle
+    written_statement: Tamamını görüntüle
+  social_media:
+    follow_us:
+  support:
+    array:
+      last_word_connector: ve
+  time:
+    formats:
+      long_ordinal: "%e %B %Y %H:%M"
+  world_location:
+    headings:
+      announcements: Duyurularımız
+      country: "Ülke"
+      documents: Belgeler
+      mission: Misyonumuz
+      organisations: Organizasyon
+      priorities: "Öncelikler"
+      publications: Yayınlarımız
+      quick_links: Kısa Yollar
+      related_policies: "İlgili politikalar"
+      statistics: "İstatistiklerimiz"
+    type:
+      international_delegation:
+        one: Uluslararası heyet
+        other: Uluslararası heyetler
+      world_location:
+        one: "Ülke "
+        other: "Ülkeler"
+  worldwide_organisation:
+    corporate_information:
+      about_our_services_html:
+      personal_information_charter_html: Bu %{link} bilgilerinizi nasıl sakladığımız
+        açıklamaktadır
+      publication_scheme_html: Rutin olarak yayınladığımız bilgiler için bu %{link}
+        'e bakınız
+      social_media_use_html: Konuyla ilgili politikamız hakkında daha fazla bilgi
+        için %{link}
+      welsh_language_scheme_html: Yayın hedefimiz ile ilgili bilgilere bu  %{link}ten
+        ulaşabilirsiniz.
+    find_out_more: Tüm profil ve iletişim bilgilerini görmek için
+    headings:
+      about_us: Hakkımızda
+      contact_us: Bize ulaşın
+      corporate_information: Kurumsal Bilgi
+      follow_us: Bizi takip edin
+      our_people: Biz Kimiz
+      our_services: Hizmetlerimiz
+    location: Konum
+    part_of: X'in parçası

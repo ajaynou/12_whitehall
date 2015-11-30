@@ -1,0 +1,43 @@
+<% page_title "Find a British embassy, High Commission or Consulate" %>
+<% page_class "worldwide-organisations embassies-index" %>
+
+<header class="block headings-block">
+ <div class="inner-block floated-children">
+   <%= render partial: 'shared/heading',
+             locals: { heading: "Find a British embassy, high commission or consulate",
+                       type: "Worldwide" } %>
+  </div>
+</header>
+
+<div class="block-2">
+  <div class="inner-block embassy-listing">
+
+    <span class="a-z-heading"><span class="visuallyhidden">Countries ordered from </span><h1>A&ndash;Z</h1></span>
+
+    <ol class="locations">
+      <% @embassies_by_location.each do |embassy| -%>
+      <li>
+        <h2><%= embassy.name %></h2>
+        <% if embassy.offices.empty? -%>
+          <p><%= embassy.name %> doesn't have consular services, you can get consular assistance from the local authorities.</p>
+        <% else -%>
+          <ul>
+
+          <% if embassy.remote_services_country -%>
+            <% organisation = embassy.consular_services_organisations.first -%>
+            <li>
+              <p><%= embassy.name %> doesn't have consular services, you need to go to the <%= organisation.name %> in <%= embassy.remote_services_country %>.</p>
+              <%= link_to(organisation.name, worldwide_organisation_path(organisation.slug)) %>
+            </li>
+
+          <% else -%>
+            <%= render partial: "organisation", collection: embassy.consular_services_organisations %>
+          <% end -%>
+
+          </ul>
+        <% end -%>
+      </li>
+      <% end -%>
+    </ol>
+  </div>
+</div>

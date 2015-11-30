@@ -1,0 +1,1 @@
+Whitehall::DataMigrationTest::MyData.migrate!

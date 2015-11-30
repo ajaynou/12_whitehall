@@ -1,0 +1,123 @@
+<% page_title "Ministers" %>
+<% page_class "ministers-index" %>
+
+<header class="block headings-block">
+  <div class="inner-block floated-children">
+    <%= render partial: 'shared/heading',
+              locals: { big: true,
+                        heading: "Ministers" } %>
+
+    <p class="intro-paragraph">Read biographies and responsibilities of <a href="#cabinet-ministers">Cabinet ministers</a> and all <a href="#ministers-by-department">ministers by department</a>, as well as the <a href="#whips">whips</a> who help co-ordinate parliamentary business.</p>
+  </div>
+</header>
+
+<% if @is_during_reshuffle %>
+  <div class="block">
+    <div class="inner-block">
+      <aside class="status-block">
+        <%= govspeak_to_html @reshuffle_messaging %>
+      </aside>
+    </div>
+  </div>
+<% end %>
+
+<div class="block-2">
+  <div class="inner-block floated-children">
+    <section class="cab_ministers">
+      <h2 class="label" id="cabinet-ministers">Cabinet ministers</h2>
+      <ul id="cabinet" class="cabinet-list">
+        <% @cabinet_ministerial_roles.each_with_index do |(person, roles), i| %>
+          <%= render partial: "people/person",
+              locals: {
+                person: person,
+                roles: roles,
+                hlevel: "h3",
+                hide_image: false,
+                extra_class: (i % 4 == 0) ? 'clear-person' : ''
+          } %>
+        <% end %>
+      </ul>
+    </section>
+  </div>
+</div>
+<% if @also_attends_cabinet.any? %>
+  <div class="block-2">
+    <div class="inner-block floated-children">
+      <section class="cab_ministers">
+        <h2 class="label" id="also-attends-cabinet-ministers">Also attends Cabinet</h2>
+        <ul id="also-attends-cabinet" class="cabinet-list">
+          <% @also_attends_cabinet.each_with_index do |(person, roles), i| %>
+            <%= render partial: "people/person",
+                locals: {
+                  person: person,
+                  roles: roles,
+                  hlevel: "h3",
+                  hide_image: false,
+                  extra_class: (i % 4 == 0) ? 'clear-person' : '',
+                  display_cabinet_attendance: true
+            } %>
+          <% end %>
+        </ul>
+      </section>
+    </div>
+  </div>
+<% end %>
+
+<div class="ministers-by-organisation">
+  <div class="inner-block floated-children">
+    <h2 id="ministers-by-department">Ministers by department</h2>
+    <% @ministers_by_organisation.each do |organisation, ministers| %>
+      <%= content_tag_for :section, organisation do %>
+        <div class="heading">
+          <h3>
+            <%= link_to organisation_path(organisation), class: logo_classes(organisation: organisation,  size: 'medium', stacked: true) do %>
+              <span><%= format_with_html_line_breaks(organisation.logo_formatted_name) %></span>
+            <% end %>
+          </h3>
+        </div>
+        <ul class="minister-list">
+          <% ministers.with_unique_people.each.with_index do |role, i| %>
+            <%= render partial: "people/person",
+                locals: {
+                  person: PersonPresenter.new(role.current_person, self),
+                  roles: ministers.roles_for(role.current_person),
+                  hlevel: "h4",
+                  prefix: "by-organisation-#{organisation.slug}",
+                  hide_image: true,
+                  extra_class: (i % 3 == 0) ? 'clear-person' : ''
+                } %>
+          <% end %>
+        </ul>
+      <% end %>
+      <hr class="keyline">
+    <% end %>
+  </div>
+</div>
+
+<div class="ministers-by-organisation whips">
+  <div class="inner-block floated-children">
+    <h2 id="whips">Whips</h2>
+
+    <% @whips_by_organisation.each do |whip_organisation, whips| %>
+      <%= content_tag_for :section, whip_organisation do %>
+        <div class="heading">
+          <h3><%= whip_organisation.name %></h3>
+        </div>
+        <ul class="minister-list">
+          <% whips.unique_people.each.with_index do |person, i| %>
+            <%= render partial: "people/person",
+                locals: {
+                  person: PersonPresenter.new(person, self),
+                  roles: whips.roles_for(person),
+                  hlevel: "h4",
+                  prefix: 'by-organisation',
+                  hide_image: true,
+                  extra_class: (i % 3 == 0) ? 'clear-person' : ''
+                } %>
+          <% end %>
+        </ul>
+      <% end %>
+      <hr class="keyline">
+    <% end %>
+  </div>
+</div>

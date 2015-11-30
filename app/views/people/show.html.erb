@@ -1,0 +1,107 @@
+<% page_title @person.name %>
+<% page_class "people-show biographical-page" %>
+
+<%= content_tag_for :div, @person, class: "two-column-page" do %>
+  <header class="block headings-block">
+    <div class="inner-block floated-children">
+      <%= render partial: 'shared/heading',
+                locals: { type: @person.current_role_appointments.map { |a| a.role.name }.to_sentence,
+                          heading: @person.name,
+                          big: true, extra: true } %>
+      <div class="heading-extra">
+        <div class="inner-heading">
+          <%= render partial: 'shared/available_languages', locals: {object: @person } %>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="block-2 ">
+    <div class="inner-block">
+      <section class="contextual-info in-page-navigation ">
+        <% if @person.in_current_role? %>
+          <div class="image">
+            <figure class="img">
+              <%= @person.image %>
+            </figure>
+          </div>
+        <% end %>
+        <h1><%= t('document.contents') %></h1>
+        <nav role="navigation">
+          <ul>
+            <li><%= link_to t('people.biography'), '#biography' %></li>
+            <% if @person.in_current_role? %>
+              <li><%= link_to t('roles.heading', count: @person.current_role_appointments.count), "#current-roles" %></li>
+            <% end %>
+            <% if @person.previous_role_appointments.any? %>
+              <li><%= link_to t('people.previous_roles'), "#previous-roles" %></li>
+            <% end %>
+            <% if @person.has_policy_responsibilities? %>
+              <li><%= link_to t('policies.heading'), "#policy" %></li>
+            <% end %>
+            <% if @person.announcements.any? %>
+              <li><%= link_to t('announcements.heading'), "#announcements" %></li>
+            <% end %>
+          </ul>
+        </nav>
+      </section>
+    </div>
+  </div>
+
+  <div class="block-3">
+    <div class="inner-block">
+      <section class="biography" id="biography">
+        <h1 class="label"><%= t('people.biography') %></h1>
+        <%= @person.biography %>
+      </section>
+
+      <div class="current-roles" id="current-roles">
+        <% @person.current_role_appointments.each do |appointment| %>
+          <%= content_tag_for :section, appointment, class: "role" do %>
+            <h1 id="<%= appointment.role.name.parameterize%>"><%= appointment.role.name %></h1>
+            <%= appointment.role.responsibilities %>
+            <div class="read-more">
+              <% if appointment.role.ministerial? %>
+                <%= link_to t('roles.read_more'), appointment.role %>
+              <% end %>
+              <% if appointment.role.worldwide? %>
+                <%= render partial: 'organisations/organisations_name_list',
+                           locals: { organisations: appointment.role.worldwide_organisations } %>
+              <% else %>
+                <%= render  partial: 'organisations/organisations_name_list',
+                            locals: { organisations: appointment.role.organisations } %>
+              <% end %>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+
+      <% if @person.previous_role_appointments.any? %>
+        <section class="previous-roles" id="previous-roles">
+          <h1><%= t('people.previous_roles_in_government') %></h1>
+
+          <ol class="document-list">
+            <% @person.previous_role_appointments.each do |appointment| %>
+              <%= content_tag_for :li, appointment, class: "document-row" do %>
+                <h3><%= appointment.role_link %></h3>
+                <ul class="attributes">
+                  <li class="date"><%= appointment.date_range %></li>
+                </ul>
+              <% end %>
+            <% end %>
+          </ol>
+        </section>
+      <% end %>
+
+      <% if @person.has_policy_responsibilities? %>
+        <section id="policy">
+          <h1><%= t('policies.heading') %></h1>
+
+          <%= render 'policies/document_list', policies: @person.published_policies %>
+        </section>
+      <% end %>
+
+      <%= render 'shared/announcement_list', announcer: @person %>
+    </div>
+  </div>
+<% end %>

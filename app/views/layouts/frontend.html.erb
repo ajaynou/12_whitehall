@@ -1,0 +1,21 @@
+<%= render :layout => 'layouts/frontend_base' do %>
+  <nav id="proposition-menu" class="no-proposition-name">
+    <ul id="proposition-links">
+      <li><%= main_navigation_link_to "Departments", organisations_path %></li>
+      <li><%= main_navigation_link_to "Worldwide", world_locations_path(locale: :en) %></li>
+      <li><%= main_navigation_link_to 'How government works', how_government_works_path %></li>
+      <li><%= main_navigation_link_to "Get involved", get_involved_path %></li>
+      <li class="clear-child"><%= main_navigation_link_to "Policies", policies_path %></li>
+      <li><%= main_navigation_link_to "Publications", publications_path %></li>
+      <li><%= main_navigation_link_to "Consultations", publications_filter_path(publication_filter_option: 'consultations') %></li>
+      <li><%= main_navigation_link_to "Statistics", statistics_path %></li>
+      <li><%= main_navigation_link_to "Announcements", announcements_path %></li>
+    </ul>
+  </nav>
+  <main id="content" role="main" class="whitehall-content">
+    <div id="page" class="<%= content_for?(:page_class) ? yield(:page_class) : '' %>" >
+      <%= yield %>
+      <%= render_mustache_templates if Rails.env.development? %>
+    </div>
+  </main>
+<% end %>

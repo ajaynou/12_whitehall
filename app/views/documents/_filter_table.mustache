@@ -1,0 +1,54 @@
+{{#results_any?}}
+  <ol class="js-document-list document-list">
+    {{#results}}
+      <li id="{{type}}_{{id}}" class="document-row">
+        <h3><a href="{{url}}">{{title}}</a></h3>
+        <ul class="attributes">
+          <li>{{{display_date_microformat}}}</li>
+          <li class="organisations">{{{organisations}}}</li>
+          <li class="display-type">{{display_type}}</li>
+          {{#field_of_operation}}
+            <li class="field-of-operation">{{{field_of_operation}}}</li>
+          {{/field_of_operation}}
+          {{#topics}}
+            <li class="topics">{{{topics}}}</li>
+          {{/topics}}
+          {{#publication_collections}}
+            <li class="document-collections">{{{publication_collections}}}</li>
+          {{/publication_collections}}
+        </ul>
+        {{#historic?}}
+          {{#government_name}}
+            <p class="historic">
+            First published during the {{government_name}}
+            </p>
+          {{/government_name}}
+        {{/historic?}}
+      </li>
+    {{/results}}
+  </ol>
+  {{#more_pages?}}
+    <nav id="show-more-documents" role="navigation">
+      <ul class="previous-next-navigation">
+        {{#prev_page?}}
+          <li class="previous">
+            <a href="{{prev_page_url}}">Previous <span class="visuallyhidden">page</span> <span class="page-numbers">{{prev_page}} of {{total_pages}}</span></a>
+          </li>
+        {{/prev_page?}}
+        {{#next_page?}}
+          <li class="next">
+            <a href="{{next_page_url}}">Next <span class="visuallyhidden">page</span> <span class="page-numbers">{{next_page}} of {{total_pages}}</span></a>
+          </li>
+        {{/next_page?}}
+      </ul>
+    </nav>
+  {{/more_pages?}}
+{{/results_any?}}
+{{^results_any?}}
+  <div class="no-results">
+    <h2>{{no_results_title}}</h2>
+    <p>{{no_results_description}}</p>
+    <h3>{{{no_results_tna_heading}}}</h3>
+    <p>{{{no_results_tna_link}}}</p>
+  </div>
+{{/results_any?}}

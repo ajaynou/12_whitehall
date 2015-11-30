@@ -1,0 +1,76 @@
+.historic-appointments {
+  .historic-people-list {
+    @include media(tablet) {
+      float: left;
+      width: $one-quarter;
+    }
+    h3 {
+      @include core-19;
+      margin-bottom: $gutter;
+
+      span {
+        @include core-80;
+        font-weight: bold;
+        display: block;
+      }
+    }
+  }
+}
+.historic-appointments-index {
+  .featured-profiles {
+    @include media(tablet) {
+      width: 75%;
+      float: left;
+    }
+
+    .year-block {
+      @include media(tablet) {
+        width: $one-third;
+        float: left;
+      }
+
+      h2 {
+        @include core-19;
+        font-weight: bold;
+        border-bottom: $gutter-one-sixth solid;
+        margin: 0 $gutter-half $gutter-one-sixth;
+      }
+
+      .person-excerpt {
+        width: $full-width;
+        float: none;
+        @include media(tablet) {
+          min-height: 280px;
+        }
+
+        h3 {
+          @include core-19;
+          font-weight: bold;
+        }
+        p {
+          color: $secondary-text-colour;
+        }
+        img {
+          width: $full-width;
+        }
+      }
+    }
+  }
+}
+
+.historical-past-chancellors {
+  .featured-profiles {
+    @include media(tablet) {
+      width: $full-width;
+    }
+    .year-block {
+      @include media(tablet) {
+        width: $one-quarter;
+      }
+
+      .person-excerpt {
+        min-height: 0;
+      }
+    }
+  }
+}

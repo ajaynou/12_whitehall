@@ -1,0 +1,30 @@
+<%
+  link_to_homepage ||= false
+%>
+<% if organisation.supporting_bodies.any? %>
+  <p class="works-with">
+    Works with <%= organisation.supporting_bodies.count %>
+    <% if organisation.supporting_bodies.count == 1 %>
+      public body
+    <% else %>
+      agencies and public bodies
+    <% end %>
+  </p>
+  <div class="organisations-box js-hidden"><div class="organisations-box-inner">
+    <% if link_to_homepage %>
+      <p><%= link_to "#{organisation.name} homepage", organisation_path(organisation) %></p>
+    <% end %>
+    <% organisation.supporting_bodies_grouped_by_type.each do |type, departments| %>
+      <% unless type.executive_office? %>
+        <h3><%= type.name %></h3>
+      <% end %>
+      <ol>
+        <% departments.each do |department| %>
+          <%= content_tag_for :li, department, "#{dom_id(organisation)}_works_with" do %>
+            <%= link_to department.name, organisation_path(department) %>
+          <% end %>
+        <% end %>
+      </ol>
+    <% end %>
+  </div></div>
+<% end %>

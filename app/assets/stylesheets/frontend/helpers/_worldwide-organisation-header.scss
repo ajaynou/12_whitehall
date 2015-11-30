@@ -1,0 +1,60 @@
+.worldwide-organisation-header {
+  margin: $gutter-half 0;
+  @include media(tablet) {
+    padding-bottom: $gutter;
+  }
+
+  .logo {
+    @include media(tablet) {
+      margin-top: $gutter-half;
+      float: left;
+      width: $two-thirds;
+      @include right-to-left {
+        float: right;
+      }
+    }
+    h1 {
+      margin: 0 $gutter-half;
+    }
+  }
+  .headings-block {
+    float: left;
+    width: $one-third;
+  }
+  .available-languages {
+    ul {
+      margin: 0 $gutter-half;
+    }
+  }
+  .metadata {
+    margin-top: $gutter-one-third;
+
+    @include media(tablet) {
+      float: right;
+      width: $one-third;
+      @include right-to-left {
+        float: left;
+      }
+    }
+    dl {
+      @extend %contain-floats;
+      @include core-14;
+      margin: 0 $gutter-half;
+
+      dt {
+        float: left;
+        clear: both;
+        width: 7em;
+        @include right-to-left {
+          float: right;
+        }
+      }
+      dd {
+        float: left;
+        @include right-to-left {
+          float: right;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+<% page_title "Edit " + @classification.name %>
+
+<div class="row">
+  <section class="col-md-8">
+    <h1>Edit <%= human_friendly_model_name.downcase %></h1>
+    <p class="warning">Warning: changes to <%= human_friendly_model_name.downcase %>s appear instantly on the live site.</p>
+    <%= render partial: "form", locals: {classification: @classification, show_instantly_live_warning: true} %>
+  </section>
+
+  <section class="sidebar col-md-4 display_heading">
+    <h1>Delete <%= human_friendly_model_name.downcase %></h1>
+    <% if @classification.destroyable? %>
+      <%= button_to 'Delete',
+            [:admin, @classification],
+            method: :delete,
+            class: 'btn btn-danger',
+            data: { confirm: "Are you sure you want to delete: #{@classification} ?" } %>
+    <% else %>
+      <div class="policies_preventing_destruction">
+        <p>This policy area can’t be deleted as it has associated policies:</p>
+        <ul>
+          <% @classification.policies.each do |policy| %>
+            <li><%= link_to(policy.title, policy_path(policy)) %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+  </section>
+</div>

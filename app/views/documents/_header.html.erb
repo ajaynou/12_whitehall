@@ -1,0 +1,34 @@
+<%# The <meta> tags will be hoisted into <head> by Slimmer %>
+<%= political_state_analytics_tag(document) %>
+<%= publishing_government_analytics_tag(document) %>
+
+<%
+  header_title ||= ""
+  policies ||= nil
+  specialist_tag_finder = SpecialistTagFinder.new(@document)
+%>
+<%= render partial: 'shared/heading',
+          locals: { type: add_sector_name(header_title, specialist_tag_finder.primary_sector_tag),
+                    heading: document.title,
+                    extra: true } %>
+
+<%= render('documents/withdrawn_notice', document: document, type: document.format_name) if document.withdrawn? %>
+
+<div class="heading-extra">
+  <div class="inner-heading">
+    <%= render partial: 'shared/available_languages', locals: {object: document} %>
+    <% if @document.respond_to?(:logo_url) && @document.logo_url %>
+      <%= image_tag @document.logo_url, id: "logo-image" %>
+    <% end %>
+    <%= national_statistics_logo(document) %>
+  </div>
+</div>
+<%= render 'documents/metadata', document: document,
+                                 footer_meta: (defined?(footer_meta) ? footer_meta : false),
+                                 policies: policies,
+                                 specialist_tag_finder: specialist_tag_finder %>
+
+<% if document.historic? %>
+<%= render('documents/history_notice', type: document.format_name,
+                                       government_name: document.government.try(:name)) %>
+<% end %>

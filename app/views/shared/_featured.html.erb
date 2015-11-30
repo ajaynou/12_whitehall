@@ -1,0 +1,43 @@
+<%
+  extra_class ||= ""
+  offset = defined?(counter_offset) ? counter_offset : 0
+  extra_classes =
+    if defined?(feature_counter)
+      extra_class + " item-#{(feature_counter + offset)}"
+    else
+      extra_class
+    end
+  image_size ||= :s300
+  show_meta ||= false
+%>
+<%= content_tag_for(:article, feature, nil, class: extra_classes.strip) do %>
+  <div class="content">
+    <span class="image-holder">
+      <% if feature.offsite_link %>
+        <% feature_title = feature.title %>
+      <% else %>
+        <% feature_title = I18n.t("document.read", title: feature.title) %>
+      <% end %>
+      <%= link_to image_tag(feature.image(image_size), {class: 'featured-image', alt: feature.alt_text}), feature.public_path, title: feature_title, class: 'img'%>
+    </span>
+    <div class="text">
+      <% if show_meta %>
+        <p class="meta">
+          <% if feature.topical_event %>
+            <%= absolute_date(feature.time_stamp) %>
+          <% else %>
+            <% if feature.time_stamp %>
+              <%= absolute_date(feature.time_stamp) %> &mdash; <%= t_display_type feature %>
+            <% else %>
+              <%= t_display_type feature %>
+            <% end %>
+          <% end %>
+        </p>
+      <% end %>
+      <h2><%= link_to feature.title, feature.public_path, ({rel: 'external'} if is_external?(feature.public_path)) %></h2>
+      <% unless feature.summary.blank? %>
+        <p class="summary"><%= truncate(feature.summary, length: 150, separator: ' ') %></p>
+      <% end %>
+    </div>
+  </div>
+<% end %>

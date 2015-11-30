@@ -1,0 +1,491 @@
+en:
+  i18n:
+    direction: ltr
+  language_names:
+    ar: Arabic
+    de: German
+    dr: Dari
+    en: English
+    cy: Welsh
+    es: Spanish
+    es-419: Latin American Spanish
+    et: Estonian
+    fa: Persian
+    fr: French
+    it: Italian
+    ja: Japanese
+    pt: Portuguese
+    ru: Russian
+    tr: Turkish
+    ur: Urdu
+    zh: Chinese
+    zh-hk: Cantonese
+    zh-tw: Traditional Chinese
+    bg: Bulgarian
+    cs: Czech
+    he: Hebrew
+    ko: Korean
+    pl: Polish
+    ro: Romanian
+    sr: Serbian
+    th: Thai
+    uk: Ukrainian
+    vi: Vietnamese
+    sq: Albanian
+    hy: Armenian
+    az: Azeri
+    bn: Bangla
+    be: Belarusian
+    ka: Georgian
+    el: Greek
+    hu: Hungarian
+    hi: Hindi
+    lv: Latvian
+    lt: Lithuanian
+    ms: Malay
+    ps: Pashto
+    si: Sinhala
+    sk: Slovakian
+    so: Somali
+    sw: Swahili
+    ta: Tamil
+    tk: Turkmen
+    uz: Uzbeki
+    id: Indonesian
+  activerecord:
+    nested_attachment_field_names: &nested_attachment_field_names
+      command_paper_number: Attachment command paper number
+      hoc_paper_number: House of Commons paper number
+      isbn: Attachment ISBN
+      order_url: Attachment order url
+      price: Attachment price
+      title: Attachment title
+      unique_reference: Attachment unique reference
+      unnumbered_hoc_paper: Unnumbered House of Commons paper
+    nested_attachment_data_field_names: &nested_attachment_data_field_names
+      file: The attached file
+    attributes:
+      attachment:
+        hoc_paper_number: House of Commons paper number
+        isbn: ISBN
+        unnumbered_hoc_paper: Unnumbered House of Commons paper
+      attachment_data:
+        file: File
+      corporate_information_page/corporate_information_page_attachments/attachment:
+        <<: *nested_attachment_field_names
+      corporate_information_page/corporate_information_page_attachments/attachment/attachment_data:
+        <<: *nested_attachment_data_field_names
+      policy_group/policy_group_attachments/attachment/attachment_data:
+        <<: *nested_attachment_data_field_names
+      response/consultation_response_attachments/attachment:
+        <<: *nested_attachment_field_names
+      response/consultation_response_attachments/attachment/attachment_data:
+        <<: *nested_attachment_data_field_names
+  date:
+    formats:
+      default: ! '%d %B %Y'
+      long_ordinal: ! '%e %B %Y'
+  support:
+    array:
+      last_word_connector: ! ' and '
+  number:
+    human:
+      storage_units:
+         format: ! '%n%u'
+  document:
+    published: published
+    contents: Contents
+    headings:
+      field_of_operation: Field of operation
+      applies_to_nations: Applies to
+      part_of: Part of
+      from: From
+      location: Location
+      attachments:
+        one: Document
+        other: Documents
+    type:
+      announcement:
+        one: Announcement
+        other: Announcements
+      case_study:
+        one: Case study
+        other: Case studies
+      closed_consultation:
+        one: Closed consultation
+        other: Closed consultations
+      consultation:
+        one: Consultation
+        other: Consultations
+      consultation_outcome:
+        one: Consultation outcome
+        other: Consultation outcomes
+      corporate_report:
+        one: Corporate report
+        other: Corporate reports
+      correspondence:
+        one: Correspondence
+        other: Correspondences
+      detailed_guidance:
+        one: Guidance
+        other: Guidance
+      document_collection:
+        one: Collection
+        other: Collections
+      draft_text:
+        one: Draft text
+        other: Draft texts
+      fatality_notice:
+        one: Fatality notice
+        other: Fatality notices
+      foi_release:
+        one: FOI release
+        other: FOI releases
+      form:
+        one: Form
+        other: Forms
+      guidance:
+        one: Guidance
+        other: Guidance
+      statutory_guidance:
+        one: Statutory guidance
+        other: Statutory guidance
+      impact_assessment:
+        one: Impact assessment
+        other: Impact assessments
+      imported:
+        one: imported - awaiting type
+        other: imported - awaiting type
+      independent_report:
+        one: Independent report
+        other: Independent reports
+      international_treaty:
+        one: International treaty
+        other: International treaties
+      map:
+        one: Map
+        other: Maps
+      notice:
+        one: Notice
+        other: Notices
+      decision:
+        one: Decision
+        other: Decisions
+      worldwide_priority:
+        one: World priority
+        other: World priorities
+      national_statistics:
+        one: National Statistics
+        other: National Statistics
+      news_article:
+        one: News article
+        other: News articles
+      news_story:
+        one: News story
+        other: News stories
+      open_consultation:
+        one: Open consultation
+        other: Open consultations
+      oral_statement:
+        one: Oral statement to Parliament
+        other: Oral statements to Parliament
+      policy_paper:
+        one: Policy paper
+        other: Policy papers
+      press_release:
+        one: Press release
+        other: Press releases
+      promotional:
+        one: Promotional material
+        other: Promotional material
+      publication:
+        one: Publication
+        other: Publications
+      government_response:
+        one: Government response
+        other: Government responses
+      regulation:
+        one: Regulation
+        other: Regulations
+      research:
+        one: Research and analysis
+        other: Research and analysis
+      speaking_notes:
+        one: Speaking notes
+        other: Speaking notes
+      speech:
+        one: Speech
+        other: Speeches
+      statement_to_parliament:
+        one: Statement to Parliament
+        other: Statements to Parliament
+      statistical_data_set:
+        one: Statistical data set
+        other: Statistical data sets
+      official_statistics:
+        one: Official Statistics
+        other: Official Statistics
+      transcript:
+        one: Transcript
+        other: Transcripts
+      transparency:
+        one: Transparency data
+        other: Transparency data
+      written_statement:
+        one: Written statement to Parliament
+        other: Written statements to Parliament
+      authored_article:
+        one: Authored article
+        other: Authored articles
+    updated: updated
+    view: View '%{title}'
+    read: Read the %{title} article
+    speech:
+      delivered_on: "Delivered on:"
+      written_on: "Written on:"
+      delivery_title:
+        minister: Minister
+        speaker: Speaker
+      author_title:
+        minister: Minister
+        speaker: Writer
+    footer_meta:
+      published: Published
+      updated: Updated
+      full_page_history: full page history
+      page_history: History
+  feeds:
+    get_updates_to_this_list: Get updates to this list
+    feed: feed
+    email: email
+    latest_activity: Latest activity
+  latest_feed:
+    no_updates: There are no updates yet.
+    title: Latest
+  social_media:
+    follow_us: Follow us
+  time:
+    formats:
+      long_ordinal: ! '%e %B %Y %l:%M%P'
+  world_location:
+    headings:
+      announcements: Our announcements
+      country: Country
+      documents: Documents
+      mission: Our mission
+      organisations: Organisations
+      priorities: Priorities
+      publications: Our publications
+      quick_links: Quick links
+      related_policies: Related policies
+      statistics: Our statistics
+    type:
+      international_delegation:
+        one: International delegation
+        other: International delegations
+      world_location:
+        one: World location
+        other: World locations
+  worldwide_organisation:
+    find_out_more: See full profile and all contact details
+    part_of: Part of
+    location: Location
+    headings:
+      about_us: About us
+      follow_us: Follow us
+      our_services: Our services
+      our_people: Our people
+      contact_us: Contact us
+      corporate_information: Corporate information
+    corporate_information:
+      publication_scheme_html: Read about the types of information we routinely publish in our %{link}.
+      personal_information_charter_html: Our %{link} explains how we treat your personal information.
+      welsh_language_scheme_html: Find out about our commitment to publishing in the %{link}.
+      social_media_use_html: Read our policy on %{link}.
+      about_our_services_html: Find out %{link}.
+  corporate_information_page:
+    type:
+      personal_information_charter: Personal information charter
+      publication_scheme: Publication scheme
+      complaints_procedure: Complaints procedure
+      terms_of_reference: Terms of reference
+      our_governance: Our governance
+      statistics: Statistics at %{organisation_name}
+      procurement: Procurement at %{organisation_name}
+      recruitment: Working for %{organisation_name}
+      our_energy_use: Our energy use
+      membership: Membership
+      welsh_language_scheme: Welsh language scheme
+      equality_and_diversity: Equality and diversity
+      petitions_and_campaigns: Petitions and campaigns
+      research: Research at %{organisation_name}
+      access_and_opening: Office access and opening times
+      staff_update: Staff news and information
+      media_enquiries: Media enquiries
+      social_media_use: Social media use
+      about_our_services: About our services
+      about: About us
+  contact:
+    email: Email
+    contact_form: Contact form
+  read_more: Read more
+  change_notes:
+    page_history: History
+    published_at: First published
+    see_all_updates: see all updates
+    updated_at: Last updated
+  organisation:
+    headings:
+      what_we_do: What we do
+      who_we_are: Who we are
+      our_topics: We work on these topics
+      our_policies: Our policies
+      our_announcements: Our announcements
+      our_consultations: Our consultations
+      our_services: Our services
+      our_publications: Our publications
+      our_statistics: Our statistics
+      our_ministers: Our ministers
+      our_senior_military_officials: Our senior military officials
+      our_management: Our management
+      our_judges: Our judges
+      traffic_commissioners: Traffic commissioners
+      chief_professional_officers: Our chief professional officers
+      special_representatives: Special representatives
+      contact: Contact %{name}
+      corporate_information: Corporate information
+      corporate_reports: Corporate reports
+      making_foi_requests: Make an FOI request
+      freedom_of_information_act: Freedom of Information (FOI) Act
+      documents: Documents
+    corporate_information:
+      organisation_chart: Our organisation chart
+      access_our_info: Access our information
+      jobs_and_contacts: Jobs and contracts
+      transparency: Transparency data
+      foi_releases: FOI releases
+      foi_how_to: How to make an FOI request
+    about:
+      read_more: Read more about what we do
+    making_foi_requests:
+      step1_html: Read about the Freedom of Information (FOI) Act and <a href="%{how_to_path}">how to make a request</a>
+      step2_html: Check <a href="%{our_releases_path}">our previous releases</a> to see if we’ve already answered your question
+      step3_html: "Make a new request by contacting us at:"
+    foi_exemption_html: |
+      This organisation is not covered by the Freedom of Information Act.
+      To see which organisations are included, see <a href="%{foi_url}">the legislation</a>.
+  announcements:
+    heading: Announcements
+    view_all: View all announcements
+  national_statistics:
+    heading: National Statistics
+  policies:
+    heading: Policies
+    view_all: View all policies
+  publications:
+    heading: Publications
+    headings:
+      detail: Detail
+  people:
+    heading:
+      one: Person
+      other: People
+    biography: Biography
+    read_more: More about this person
+    previous_roles: Previous roles
+    previous_roles_in_government: Previous roles in government
+  roles:
+    heading:
+      one: Role
+      other: Roles
+    ministerial: Ministerial role
+    read_more: More about this role
+    previous_holders: Previous holders of this role
+    policies_responsible_with_person: under the responsibility of %{person} as %{role}
+    headings:
+      responsibilities: Responsibilities
+      current_holder: Current role holder
+      previous_holders: Previous holders
+
+  document_filters:
+    description: You can use the filters to show only results that match your interests
+    world_locations:
+      label: World locations
+      all: All locations
+    no_results:
+      title: There are no matching documents.
+      description: Try making your search broader and try again.
+      tna_heading: Older content
+      tna_link: Not all department publications from before May 2010 were migrated to GOV.UK. To find publications from before May 2010 try searching <a href="http://webarchive.nationalarchives.gov.uk/adv_search/">The National Archives</a>.
+  attachment:
+    headings:
+      published: Published
+      reference: Ref
+      order_a_copy: Order a copy
+      order_a_copy_full: Order a copy of the publication
+      unnumbered_command_paper: Unnumbered command paper
+      unnumbered_hoc_paper: Unnumbered act paper
+    accessibility:
+      heading: This file may not be suitable for users of assistive technology.
+      request_a_different_format: Request a different format.
+      full_help_html: |
+        If you use assistive technology and need a version of this document
+        in a more accessible format, please email
+        %{email}.
+        Please tell us what format you need. It will help us if you say what assistive technology you use.
+    opendocument:
+      help_html: This file is in an <a rel="external" href="https://en.wikipedia.org/wiki/OpenDocument_software">OpenDocument</a> format
+    see_more: See more information about this %{document_type}
+  detailed_guidance:
+    back_to_contents: Back to contents
+    contents: Contents
+    more: More like this
+    part_of_published_collection: This is part of a collection
+    published_related_detailed_guides: Related detailed guidance
+    related_mainstream_content: Too much detail?<br/>See these quick guides
+    see_more_like_this: See more like this
+  see_all:
+    announcement: See all our announcements
+    case_study: See all our case studies
+    closed_consultation: See all our closed consultations
+    consultation: See all our consultations
+    consultation_outcome: See all our consultation outcomes
+    corporate_report: See all our corporate reports
+    correspondence: See all our correspondences
+    detailed_guidance: See all our guidance
+    document_collection: See all our collections
+    draft_text: See all our draft texts
+    fatality_notice: See all our fatality notices
+    foi_release: See all our FOI releases
+    form: See all our forms
+    guidance: See all our guidance
+    statutory_guidance: See all our statutory guidance
+    impact_assessment: See all our impact assessments
+    imported: See all our independent reports
+    international_treaty: See all our international treaties
+    map: See all our maps
+    notice: See all our notices
+    decision: See all our decisions
+    worldwide_priority: See all our world priorities
+    national_statistics: See all our National Statistics
+    news_article: See all our news articles
+    news_story: See all our news stories
+    open_consultation: See all our open consultations
+    oral_statement: See all our oral statements to Parliament
+    policy: See all our policies
+    policy_paper: See all our policy papers
+    press_release: See all our press releases
+    promotional: See all our promotional material
+    publication: See all our publications
+    government_response: See all our government responses
+    research: See all our research and analysis
+    regulation: See all our regulations
+    speaking_notes: See all our speaking notes
+    speech: See all our speeches
+    statement_to_parliament: See all our statements to Parliament
+    statistical_data_set: See all our statistical data sets
+    statistics: See all our statistics
+    transcript: See all our transcripts
+    transparency: See all our transparency data
+    written_statement: See all our written statements to Parliament
+    authored_article: See all our authored articles

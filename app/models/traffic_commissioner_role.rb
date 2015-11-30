@@ -1,0 +1,2 @@
+class TrafficCommissionerRole < Role
+end

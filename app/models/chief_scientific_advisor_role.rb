@@ -1,0 +1,2 @@
+class ChiefScientificAdvisorRole < Role
+end

@@ -1,0 +1,170 @@
+.historic-people-index {
+  .clear-person {
+    clear: both;
+  }
+
+  .featured-profiles {
+    margin-bottom: $gutter;
+    .profiles {
+      @include heading-36;
+      border-bottom: $gutter-one-sixth solid $black;
+      margin: 0 $gutter-half $gutter-half;
+    }
+
+    .name {
+      @include core-19;
+      font-weight: bold;
+    }
+    .term {
+      @include core-14;
+      color: $grey-1;
+    }
+
+    .person-excerpt {
+      .inner {
+        .image-holder {
+          img {
+            max-width: $full-width;
+          }
+        }
+      }
+    }
+
+    @include media(tablet) {
+      margin-bottom: $gutter*2;
+    }
+  }
+
+  .foreign-secretaries {
+    .heading, ol {
+      @include media(tablet) {
+        float: left;
+        width: $one-quarter;
+      }
+    }
+    ol {
+      li {
+        list-style: none;
+        @include media(tablet) {
+          float: left;
+          width: $one-third;
+        }
+        .inner {
+          padding: $gutter-half;
+          h4 {
+            font-weight: bold;
+          }
+        }
+      }
+      @include media(tablet) {
+        width: 75%; // There's no variable for this in the toolkit yet, needs updating when the toolkit gets updated
+      }
+    }
+    .heading {
+      h3 {
+        @include heading-36;
+        font-weight: bold;
+        padding: 0 $gutter-half;
+        span {
+          @include core-19;
+          display: block;
+        }
+        @include media(tablet) {
+          padding-top: 0;
+        }
+      }
+    }
+  }
+
+}
+
+
+
+.historic-people-show {
+  .historic-people-list, .person-info {
+    @include media(tablet) {
+      float: left;
+      width: $one-quarter;
+    }
+  }
+
+  .person-info {
+
+    .name-title, .person-detail, .person-profile {
+      .inner {
+        padding: 0 $gutter-half;
+      }
+    }
+
+    .person-profile {
+      @include core-14;
+      width: 218px;
+
+      img {
+        max-width: $full-width;
+      }
+      .info {
+        background-color: $grey-3;
+        padding-bottom: $gutter-half;
+        margin-bottom: $gutter;
+        h3, p {
+          padding: 0 $gutter-half;
+        }
+        h3 {
+          font-weight: bold;
+          margin-top: $gutter-half;
+        }
+      }
+    }
+
+    .name-title {
+      h2 {
+        @include heading-27;
+        font-weight: bold;
+        margin-bottom: $gutter;
+        span {
+          @include core-19;
+          display: block;
+          color: $grey-1;
+          margin-top: $gutter-one-sixth;
+        }
+      }
+    }
+
+    .person-detail {
+      @include core-19;
+      h3 {
+        font-weight: bold;
+      }
+      p {
+        margin-bottom: $gutter;
+        &.intro {
+          font-weight: bold;
+        }
+      }
+    }
+
+    @include media(tablet) {
+      position: relative;
+      width: 75%;
+      .person-profile {
+        float: left;
+        width: $one-third;
+        img {
+          width: $full-width;
+        }
+        .inner {
+          padding: 0 $gutter-half;
+        }
+      }
+      .name-title, .person-detail {
+        float: right;
+        width: $two-thirds;
+        .inner {
+          padding: 0 $gutter 0 $gutter-half;
+        }
+      }
+    }
+
+  }
+}
